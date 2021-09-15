@@ -2,4 +2,4 @@
 Tudo sobre JavaScript
 
 ### Introdução
-[console.log()](https://github.com/nildoeti/imersaoJavaScript/blob/main/introducao/consoleLog.js)
+[Breve Introdução ao JavaScript](https://github.com/nildoeti/imersaoJavaScript/tree/main/introducao)
