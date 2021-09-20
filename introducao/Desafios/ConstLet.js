@@ -15,7 +15,12 @@ const alturaEmCm = 1.8;
 let indiceMassaCorporal = (peso / (alturaEmCm * alturaEmCm));
 let anoNascimento = 2021 - idade;
 
-primeira solução
-console.log(nome, sobreNome, 'têm', idade, 'anos');
-console.log('tem', alturaEmCm, 'metros de altura, e seu IMC é de', indiceMassaCorporal);
-console.log(nome, sobreNome, 'nasceu em', anoNascimento);
+// primeira solução
+// console.log(nome, sobreNome, 'têm', idade, 'anos');
+// console.log('tem', alturaEmCm, 'metros de altura, e seu IMC é de', indiceMassaCorporal);
+// console.log(nome, sobreNome, 'nasceu em', anoNascimento);
+
+// Segunda solução: Template de string
+console.log(`${nome} ${sobreNome} tem ${idade} anos`)
+console.log(`tem ${alturaEmCm} metros de altura, e seu IMC é de ${indiceMassaCorporal}`)
+console.log(`${nome} ${sobreNome} nasceu em ${anoNascimento}`)
