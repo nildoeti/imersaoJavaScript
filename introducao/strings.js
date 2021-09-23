@@ -74,3 +74,25 @@ console.log(fraseDeVida.lastIndexOf('o', 4  )); // 2
 // pesquisando um objeto com uso do método lastIndexOf(), pesquisa de trás para
 // frente quando o objeto não existe
 console.log(fraseDeVida.lastIndexOf('frase', 77)); // -1
+
+/*
+    Expressão REGULAR
+*/
+// expressão REGULAR com uso do método match()
+console.log(fraseDeVida.match(/[a-z]/g));   // será tratado melhor em outra oportunidade
+
+// expressão REGULAR com uso do método search()
+console.log(fraseDeVida.search(/[a-z]/g));  // será tratado melhor em outra oportunidade
+
+// pesquisando um objeto com uso do método search
+console.log(frasePositiva.search(/[a]/)); // letra 'a' achado no indíce 6
+
+// expressão REGULAR com uso da função replace()
+console.log(fraseMotivacional.replace('êxito', 'sucesso')); // substitui 'exito' por 'sucesso'
+
+// expressão REGULAR com uso do método replace mas com expressão regular
+console.log(fraseReflexao.replace(/nela/, 'nele')); // substitui 'nela' por 'nele'
+
+// expressão REGULAR com uso do método replace() para substituir um valor na expressão
+console.log(fraseFilosofica.replace(/a/, '#')); // substitui apenas a primera ocorrẽncia
+console.log(fraseFilosofica.replace(/a/g, '#'))
