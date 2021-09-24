@@ -79,10 +79,10 @@ console.log(fraseDeVida.lastIndexOf('frase', 77)); // -1
     Expressão REGULAR
 */
 // expressão REGULAR com uso do método match()
-console.log(fraseDeVida.match(/[a-z]/g));   // será tratado melhor em outra oportunidade
+console.log(fraseDeVida.match(/[a-z]/g));   // flague g, pesquisa todas as ocorrẽncias
 
 // expressão REGULAR com uso do método search()
-console.log(fraseDeVida.search(/[a-z]/g));  // será tratado melhor em outra oportunidade
+console.log(fraseDeVida.search(/[a-z]/g));  // flague g, pesquisa todas as ocorrẽncias
 
 // pesquisando um objeto com uso do método search
 console.log(frasePositiva.search(/[a]/)); // letra 'a' achado no indíce 6
@@ -95,4 +95,29 @@ console.log(fraseReflexao.replace(/nela/, 'nele')); // substitui 'nela' por 'nel
 
 // expressão REGULAR com uso do método replace() para substituir um valor na expressão
 console.log(fraseFilosofica.replace(/a/, '#')); // substitui apenas a primera ocorrẽncia
-console.log(fraseFilosofica.replace(/a/g, '#'))
+console.log(fraseFilosofica.replace(/a/g, '#')); // substitui todas as ocorrẽncias de 'a', por '#'
+
+/*
+    Saber o tamanho de uma STRING em JavaScript
+*/
+// uso do método length para saber tamanho de uma STRING
+console.log(fraseDeVida.length); // 63
+
+/*
+    Fatiamento de uma STRING
+*/
+console.log('Uma história fantástica'.slice(0, 4)); // Uma
+console.log('Uma história fantástica'.slice(4, 12)); // história
+console.log('uma história fantástica'.slice(-10)); // fantástica
+console.log('uma história fantástica'.slice(13)); // fantástica
+console.log('uma história fantástica'.slice(13, -1)); // fantástica
+
+// fatiamento com o método substring
+console.log('uma história fantástica'.substring(13)); // fantástica
+console.log('uma história fantástica'.substring(13, -1)); // uma história
+
+// fatiamento com o método slice()
+console.log('uma história fantástica'.split('')); // fatiamento padrão com virgula, letra por letra
+console.log('uma história fantástica'.split(' ')); // fatiamento padrão com virgula, palavra por palavra
+console.log('uma história fantástica'.split('a')); // omitindo o todos os caracteres 'a' da frase
+console.log('uma história fantástica'.split(' ', 2)); // fatiamento somente com ás duas primeras palavras da frase
