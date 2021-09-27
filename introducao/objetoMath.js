@@ -15,7 +15,7 @@ console.log(Math.max(3, 6, 9, -7)); // 9
 // método min
 console.log(Math.min(3, 6, 9, -7)); // 3
 
-// método radon()
+// método random()
 const numeroAleatorio1 = Math.random() * (1-2) + 2;
 console.log(numeroAleatorio1);
 
