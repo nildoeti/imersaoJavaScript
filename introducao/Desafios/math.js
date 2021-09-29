@@ -1,20 +1,28 @@
 // ler um número
-let terminal = Number(prompt('Digite um número: '));
+const numero = Number(prompt('Digite um número: '));
 
-let raizQuadrada = Math.sqrt(terminal); // quadrado de um número?
-alert(`A raiz quadrada de ${terminal} é: ${raizQuadrada}`);
+// html h1
+const numeroTitulo = document.getElementById('numero-titulo');
+numeroTitulo.innerHTML = numero;
 
-let inteiroTrueFalse = Number.isInteger(terminal); // verifica se um número é inteiro
-alert(`${terminal} é inteiro? ${inteiroTrueFalse}`);
+// quadrado
+const numeroQuadrado = document.getElementById('quadrado');
+numeroQuadrado.innerHTML = `${numero}² = ${numero * numero}`;
 
-let naoENumero = Number.isNaN(terminal); // não é um número ?
-alert(`${terminal} é NaN? ${naoENumero}`);
+// inteiro? true/false
+const numeroInteiro = document.getElementById('inteiro');
+numeroInteiro.innerHTML = `${numero} é inteiro? ${Number.isInteger(numero)}.`;
 
-let arredondaParaCima = Math.ceil(terminal);
-alert(`${terminal} arredondado para cima é: ${arredondaParaCima}`);
+const naoNumero = document.getElementById('naoNum');
+naoNumero.innerHTML = `${numero} é NaN? ${Number.isNaN(numero)}`;
 
-let arredondaParaBaixo = Math.floor(terminal);
-alert(`${terminal} arredondado para baixo é: ${arredondaParaBaixo}`)
+// arredonda para cima
+const arredondaParaCima = document.getElementById('arredondaC');
+arredondaParaCima.innerHTML = `${numero} arredondado para cima: ${Math.round(numero)}`;
 
-let fixaEmDuasCasasDecimais = terminal.toFixed(2);
-alert(`${terminal} fixado em dois digitos: ${fixaEmDuasCasasDecimais}`);
+// arredonda para baixo
+const arredondaParaBaixo = document.getElementById('arredondaB');
+arredondaParaBaixo.innerHTML = `${numero} arredondado para baixo: ${Math.floor(numero)}`;
+
+const duasCasasDecimais = document.getElementById('casaDecimal');
+duasCasasDecimais.innerHTML = `${numero} com duas casas decimal: ${ numero.toFixed(2)}`;
