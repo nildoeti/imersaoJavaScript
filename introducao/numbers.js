@@ -39,7 +39,3 @@ result += num1 + num2 + num2 + num2; // valor próximo de 1 inteiro
 
 console.log(result);
 console.log(Number.isInteger(result)); // não é um valor inteiro 1
-
-let result2 = parseFloat(result.toFixed(2));
-console.log(result2); // 1
-console.log(Number.isInteger(result2));
