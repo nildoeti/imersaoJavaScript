@@ -24,7 +24,7 @@ let resultado3 = (numero1 + 2.788987);
 console.log(resultado3); // 1502.788987
 console.log(resultado3.toFixed(2)); // 1502.79
 
-// saber se um determindo valor em uma variável é do tipo inteiro
+// saber se um determinado valor em uma variável é do tipo inteiro
 console.log(Number.isInteger(numero1)); // true
 
 // não se calcula Number com Strin
