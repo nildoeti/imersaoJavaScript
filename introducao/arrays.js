@@ -1,56 +1,75 @@
-// listas de divertos tiipos de objetos, porém não sendo uma boa prática na programação
-let listaDiversa = ['maria', 123, true, false, ['maça', 'banana'], null];
+/*
+    Descrição
+    Arrays são objetos semelhantes a listas que vêm com uma série de métodos
+    embutidos para realizar operações de travessia e mutação.
+*/
 
-// lista de nomes
-//índice        0       1       2          3
-let nomes = ['pedro', 'ana', 'maria', 'rubens'];
-console.log(`Lista atual: ${nomes}`); // exibe todos os objetos da lista
-console.log(nomes[0]); // acessa o primeiro objeto da lista
-console.log(nomes[1]); // acessa o segundo objeto da lista
+// Exemplo de uma array de strings
+let frutas = ['maça', 'laranja', 'morango', 'banana'];
+
+// Exemplo de uma array de números
+const numeros = [2, 7, 99, 300, 56, -56];
+
+// Exemplo de uma array com multiplos objetos, porém não sendo uma boa prática na programação
+const arrayMultiplo = [3, -88, 'poema', [6, 900], ['brasil', 'verde']];
+
+
+// acesso ao indice de uma array
+console.log(`Listando os objetos de uma array: ${frutas}`);
+
+// acesso um determinado indice na lista
+console.log(`Exibindo o primeiro item da lista de frutas: ${frutas[0]}`);
+console.log(`Exibindo o segundo item da lista de números: ${numeros[1]}`);
 
 // editar , alterar, atualizar um objeto na lista
-nomes[0] = 'marta'; // edita o primeiro objeto da lista
-console.log(`Lista alterada: ${nomes}`);
+const listaFrutas = frutas;
+console.log(`Lista atual de frutas: ${listaFrutas}`); // exibindo a lista atual de frutas
+// editar o pŕimeiro objeto da listaFrutas
+listaFrutas[0] = 'caqui';
+console.log(`Novo objeto na lista de frutas:  ${listaFrutas}`);
 
-// adiciona novo objeto na listas
-nomes[3] = 'luiz';
-console.log(`Objeto adicioando no final da lista: ${nomes}`);
+// listando o tamanho de objetos em uma lista
+const listaNumeros = numeros;
+console.log(`Quantidades de objetos na lista de números: ${listaNumeros.length}`);
 
-// saber o tamanho de um array
-console.log(`Tamanho atual da array de nomes: ${nomes.length}`);
+// adiciona novo objeto no início da lista
+listaNumeros.unshift(-77);
+console.log(`adiciona -77 no incicio da lista: ${listaNumeros}`);
 
-nomes.push('fabio'); // adicioana um objeto na lista
-console.log(`Novo objeto adicioando na lista: ${nomes}`);
+// adiciona novo objeto no fim da lista
+listaNumeros.push(90.89);
+console.log(`Numeral 99.89 adicionado no final da lista: ${listaNumeros}`);
 
-nomes.unshift('beto'); // adiciona novo objeto no incio da lista
-console.log(nomes);
-
-nomes.pop(); // remove o ultimo objeto da lista
-console.log(nomes);
+// remove o ultimo objeto da lista
+console.log(`Lista atual: ${listaNumeros}`);
+listaNumeros.pop(); // remove o ultimo objeto da lista de números
+console.log(`Removido 90.80 do final da lista ${listaNumeros}`);
 
 // remove o ultimo objeto da lista e armazena em uma nova variável
-let objetoRemovido = nomes.pop();
-console.log(`Objeto removido da lista: ${objetoRemovido}`);
+const ultimoObjeto = numeros.pop();
+console.log(`${ultimoObjeto} é o ultimo objeta da lista que foi removido.`);
+
 
 // remove o primeiro objeto da lista
-let primeiroObjetoRemovido = nomes.shift();
-console.log(`Primeiro objeto da lista removido: ${primeiroObjetoRemovido}`);
+const objetoRemovido = numeros.shift();
+console.log(`${objetoRemovido} é o primeiro objeto da lista que foi removido. `);
 
-// deleta um objeto na lista e mantêm o indíce vazio
-delete nomes[1]; // remove o segundo objeto da lista
-console.log(nomes);
-console.log(nomes[1]); // confirmando o indice 1 da lista mantido e vazio
+// deletando um objeto da lista de números com o método delete()
+let novaListaDeNumeros = numeros;
+console.log(`\nAntes: ${novaListaDeNumeros}`);
+delete novaListaDeNumeros[3]; // deleta segundo objeto da lista
+console.log(novaListaDeNumeros);
 
 // fatiando a lista com o método slice
-listaFatiada1 = nomes.slice(0, 3); // determindo o intervalo do fatiamento
-console.log(listaFatiada1);
+console.log(`\nLista atual: ${numeros}`);
+let listaFatiada1 = numeros.slice(0, 2);
+console.log(`Após fatiamento: ${listaFatiada1}`);
 
-// verificando o tamanho da listas
-console.log(nomes.length);
-listaFatiada2 = nomes.slice(0, -1); // determindo o fatiamento pelo indice negativo
+let listaFatiada2 = numeros.slice(0, -1); // determindo o fatiamento pelo indice negativo
 console.log(listaFatiada2);
 
-console.log(typeof(nomes)); // uma array é do tipo objeto
-// perguntando se nomes e listaFatiada2,  é uma instância de array
-console.log(nomes instanceof(Array));
-console.log(listaFatiada2 instanceof(Array));
+// uma array é do tipo objeto
+console.log(typeof (frutas)); // object
+
+// certificando-se de que frutas é uma instância de Array
+console.log(frutas instanceof (Array)); // true
