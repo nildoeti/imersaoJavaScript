@@ -60,6 +60,15 @@ console.log(`\nAntes: ${novaListaDeNumeros}`);
 delete novaListaDeNumeros[3]; // deleta segundo objeto da lista
 console.log(novaListaDeNumeros);
 
+var colaboradora = {
+  idade: 28,
+  nome: 'alice',
+  atribuicao: 'egenheira de dados'
+}
+
+console.log(delete colaboradora.idade); // true
+console.log(colaboradora.idade); // true
+
 // fatiando a lista com o método slice
 console.log(`\nLista atual: ${numeros}`);
 let listaFatiada1 = numeros.slice(0, 2);
