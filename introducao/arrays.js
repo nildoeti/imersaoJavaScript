@@ -61,10 +61,10 @@ delete novaListaDeNumeros[3]; // deleta segundo objeto da lista
 console.log(novaListaDeNumeros);
 
 var colaboradora = {
-  idade: 28,
-  nome: 'alice',
-  atribuicao: 'egenheira de dados'
-}
+    idade: 28,
+    nome: 'alice',
+    atribuicao: 'egenheira de dados'
+};
 
 console.log(delete colaboradora.idade); // true
 console.log(colaboradora.idade); // true
