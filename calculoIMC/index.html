@@ -10,19 +10,18 @@
 </head>
 
 <body>
+    <section class="container">
+        <h1>Calculadora do IMC</h1>
+        <form action="/" id="formulario" method="POST">
+            <label for="peso"></label>
+            <input type="text" id="peso" name="peso">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" name="altura">
+            <button type="submit">Enviar</button>
+        </form>
 
-  <section class="container">
-    <h1>Calcule seu IMC</h1>
-    <form action="/" id="formulario" method="POST">
-      <label for="peso">Peso</label>
-      <input type="text" id="peso" name="peso">
-      <label for="altura">Altura</label>
-      <input type="text" id="altura" name="altura">
-      <button type="submit">Enviar</button>
-    </form>
-
-    <div id="resultado"></div>
-  </section>
+        <div id="resultado"></div>
+    </section>
 
   <script src="./assets/js/main.js"></script>
 </body>
