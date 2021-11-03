@@ -24,3 +24,6 @@ console.log(typeof(cor)); // tipo string
 
 let logico = true;
 console.log(typeof(logico)); // tipo boolean
+
+let logico2 = false;
+console.log(typeof(logico2));
