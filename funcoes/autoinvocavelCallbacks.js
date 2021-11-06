@@ -45,8 +45,6 @@ const sub = function(num1, num2) {
     return num1 - num2;
 }
 
-const resultadoSoma = cal(soma, 1, 2);
-const resultadoSub = calc(sub, 1, 2);
-
-console.log(resultadoSoma);
-console.log(resultadoSub);
+//  controlando qual função chamar
+const resultadoSoma = cal(soma, 1, 2); // 3
+const resultadoSub = calc(sub, 1, 2); // -1
