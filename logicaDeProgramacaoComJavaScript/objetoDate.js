@@ -47,8 +47,28 @@
 // const myDate = new Date();
 // formatDate(myDate);
 
-function formatDate(date) {
+function zeroLeft(num) {
 	// body...
-	console.log(date);
+	return num >= 10 ? num : `0${num}`;
 }
 
+
+function formatDate(date) {
+	// return date... 
+
+	const day = zeroLeft(date.getDay());
+	const moth = zeroLeft(date.getMonth() + 1);
+	const year = zeroLeft(date.getFullYear());
+	const hour = zeroLeft(date.getHours());
+	const minute = zeroLeft(date.getMinutes());
+	const seconds = zeroLeft(date.getSeconds());
+
+	return `${day}/${moth}/${year} ${hour}:${minute}:${seconds}`;
+}
+
+
+// declarando : date
+
+const date = new Date();
+const newDate = formatDate(date);
+console.log(newDate);
