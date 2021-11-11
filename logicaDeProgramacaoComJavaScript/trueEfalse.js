@@ -1,5 +1,5 @@
 /**
- * 	Operação aritimética com true e false em JavaScript
+ *  Operação aritimética com true e false em JavaScript
  */
 
 console.log(true + 0); // 1 + 0 = 1
