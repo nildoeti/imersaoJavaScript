@@ -47,28 +47,30 @@
 // const myDate = new Date();
 // formatDate(myDate);
 
+
+// declarando a função zeroLeft()
 function zeroLeft(num) {
 	// body...
-	return num >= 10 ? num : `0${num}`;
+	return num >= 10? num : `0${num}`
 }
 
 
+// declarando a função formatDate() seguido do parâmetro date
 function formatDate(date) {
-	// return date... 
-
+	// body...
 	const day = zeroLeft(date.getDay());
-	const moth = zeroLeft(date.getMonth() + 1);
+	const month = zeroLeft(date.getMonth());
 	const year = zeroLeft(date.getFullYear());
 	const hour = zeroLeft(date.getHours());
-	const minute = zeroLeft(date.getMinutes());
+	const minutes = zeroLeft(date.getMinutes());
 	const seconds = zeroLeft(date.getSeconds());
+	const milliseconds = zeroLeft(date.getMilliseconds());
 
-	return `${day}/${moth}/${year} ${hour}:${minute}:${seconds}`;
+	// retornando os valores das variáveis da função
+	return `${day}/${month}/${year} ${hour}:${minutes}:${seconds}:${milliseconds}`;
 }
 
-
-// declarando : date
-
+// declarando date e invocando a função formatDate()
 const date = new Date();
 const newDate = formatDate(date);
 console.log(newDate);
