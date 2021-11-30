@@ -1,82 +1,69 @@
-const date = new Date('1999-01-28 00:00:00');
+const data = new Date(); // Aceita-se parâmetros entre aspas se desejar data diferente
 
-const day = date.getDay();
-let dayWeek = 10;
-
-// // situação com if/else
-// if (dayWeek === 0) {
-// 	dayWeek = 'sunday'
-// } else if (dayWeek === 1) {
-// 	dayWeek = 'monday';
-// } else if (dayWeek == 2) {
-// 	dayWeek = 'tuesday';
-// } else if (dayWeek === 3) {
-// 	dayWeek = 'Wednesday';
-// } else if (dayWeek === 4) {
-// 	dayWeek = 'thursday';
-// } else if (dayWeek === 5) {
-// 	dayWeek = 'friday';
-// } else if{
-// 	dayWeek = 'saturday';
-// } else {
-// 	dayWeek = '';
-// }
+let diaSemana = data.getDate(); // pega o dia da semana
+diaSemana = 0;
+console.log(`Dia atual: ${diaSemana}`);
+let diaSemanaTexto;
 
 
-// situação com switch/case
-// switch(dayWeek) {
-// 	case 0:
-// 		dayWeek = 'Sunday';
-// 		break;
-// 	case 1:
-// 		dayWeek = 'Monday';
-// 		break;
-// 	case 2:
-// 		dayWeek = 'Tuesday';
-// 		break;
-// 	case 3:
-// 		dayWeek = 'Wednesday';
-// 		break;
-// 	case 4:
-// 		dayWeek = 'Thursday';
-// 		break;
-// 	case 5:
-// 		dayWeek = 'Friday';
-// 		break;
-// 	case 6:
-// 		dayWeek = 'Saturday';
-// 		break;
-
-// 	default:
-// 		dayWeek = 'Invalid option.';
-// }
-
-
-// situação com uso de uma função
-
-function dayWeek(days) {
-	// body...
-	const days;
-
-	switch (days) {
+// exemplo com função
+function pegaDiaSemanaTexto(diaSemana) {
+	switch (diaSemana) {
 		case 0:
-			return days = 'Sunday';
-		case 1:
-			return days = 'Monday';
-		case 2:
-			return days = 'Tuesday';
-		case 3:
-			return days = 'Wednesday';
-		case 4:
-			return days = 'Thursday';
-		case 5:
-			return days = 'Friday';
-		case = 6:
-			return days = 'Saturday';
-		default:
-		days = '';
-	}
+			diaSemanaTexto = 'Domingo';
+			return diaSemanaTexto;
+	}	
 }
 
-const newDayWeek = dayWeek(days);
-console.log(newDayWeek);
+let diaSemana(pegaDiaSemanaTexto);
+
+// exemplo com switc
+// switch (diaSemana) {
+// 	case 0:
+// 		diaSemanaTexto = 'Domingo';
+// 		break;
+// 	case 1:
+// 		diaSemanaTexto = 'Segunda-feira';
+// 		break;
+// 	case 2:
+// 		diaSemanaTexto = 'Terça-feira';
+// 		break;
+// 	case 3:
+// 		diaSemanaTexto = 'Quarta-feira';
+// 		break;
+// 	case 4:
+// 		diaSemanaTexto = 'Quinta-feira';
+// 		break;
+// 	case 5:
+// 		diaSemanaTexto = 'Sexta-feira';
+// 		break;
+// 	case 6:
+// 		diaSemanaTexto = 'Sábado';
+// 		break;
+// 	default:
+// 		diaSemanaTexto = 'Dia inválido.'
+// 		break;
+// }
+
+// exemplo com if-else
+// if (diaSemana === 0) {
+// 	diaSemanaTexto = 'Domingo';
+// } else if (diaSemana === 1) {
+// 	diaSemanaTexto = 'Segunda-feira';
+// } else if (diaSemana === 2) {
+// 	diaSemanaTexto = 'Terça-feira';
+// } else if (diaSemana === 3) {
+// 	diaSemanaTexto = 'Quarta-feira';
+// } else if (diaSemana === 4) {
+// 	diaSemanaTexto = 'Quinta-feira';
+// } else if (diaSemana === 5) {
+// 	diaSemanaTexto = 'Sexta-feita';
+// } else if (diaSemana === 6) {
+// 	diaSemanaTexto = 'Sábado';
+// } else {
+// 	diaSemanaTexto = 'Dia inválido';
+// }
+
+
+
+console.log(`${diaSemana} - ${diaSemanaTexto}`);
