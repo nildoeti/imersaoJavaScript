@@ -1,21 +1,46 @@
-const data = new Date(); // Aceita-se parâmetros entre aspas se desejar data diferente
+function pegaDiaDaSemana(diaSemana) {
+	let diaSemanaTexto;
+
+	switch (diaSemana) {
+	case 0:
+		diaSemanaTexto = 'Domingo';
+		return diaSemanaTexto;
+	case 1:
+		diaSemanaTexto = 'Segunda-feira';
+		return diaSemanaTexto;
+	case 2:
+		diaSemanaTexto = 'Terça-feira';
+		return diaSemanaTexto;
+	case 3:
+		diaSemanaTexto = 'Quarta-feira';
+		return diaSemanaTexto;
+	case 4:
+		diaSemanaTexto = 'Quinta-feira';
+		return diaSemanaTexto;
+	case 5:
+		diaSemanaTexto = 'Sexta-feira';
+		return diaSemanaTexto;
+	case 6:
+		diaSemanaTexto = 'Sábado';
+		return diaSemanaTexto;
+	default:
+		diaSemanaTexto = 'Dia inválido.'
+		return diaSemanaTexto;
+	}
+}
+
+
+const data = new Date('1987-4-20 00:00:00'); // Aceita-se parâmetros entre aspas se desejar data diferente
 
 let diaSemana = data.getDate(); // pega o dia da semana
-diaSemana = 0;
-console.log(`Dia atual: ${diaSemana}`);
-let diaSemanaTexto;
+diaSemana;
+const diaSemanaTexto = pegaDiaDaSemana(diaSemana)
+console.log(`Dia atual: ${diaSemana} ${diaSemanaTexto}`);
+// let diaSemanaTexto;
 
 
 // exemplo com função
-function pegaDiaSemanaTexto(diaSemana) {
-	switch (diaSemana) {
-		case 0:
-			diaSemanaTexto = 'Domingo';
-			return diaSemanaTexto;
-	}	
-}
 
-let diaSemana(pegaDiaSemanaTexto);
 
 // exemplo com switc
 // switch (diaSemana) {
@@ -66,4 +91,4 @@ let diaSemana(pegaDiaSemanaTexto);
 
 
 
-console.log(`${diaSemana} - ${diaSemanaTexto}`);
+// console.log(`${diaSemana} - ${diaSemanaTexto}`);
