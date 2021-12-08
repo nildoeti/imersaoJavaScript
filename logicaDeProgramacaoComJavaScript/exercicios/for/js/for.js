@@ -12,7 +12,10 @@ for (let i = 0; i < elementos.length; i++) {
     // atribuição via desestruturação
     let {tag, texto} = elementos[i];
     let tagCriada = document.createElement(tag);
-    tagCriada.innerHTML = texto;
+    // tagCriada.innerHTML = texto;
+    let textoCriado = document.createTextNode(texto);
+    tagCriada.appendChild(textoCriado);
+    
     div.appendChild(tagCriada);
 }
 
