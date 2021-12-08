@@ -1,3 +1,9 @@
+/*
+    Use for em: array, strings
+    Use for in em: array, strings, object
+    Use for of em: array, strings
+*/
+
 const coresdaBandeiraDoBrasil = [
     'verde',
     'amarelo',
