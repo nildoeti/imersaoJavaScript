@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
+body {
+    background-color: #e4e4b2;
+}
