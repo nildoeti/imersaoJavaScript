@@ -1,27 +1,57 @@
 /*
-    while
+    #do...while
+    A declaração do...while cria um laço que executa uma declaração até que o
+    teste da condição for falsa (false). A condição é avaliada depois que o
+    bloco de código é executado, resultando que uma declaração seja executada
+    pelo menos uma vez.
 
+    Sintaxe
+
+    do
+       statement
+    while (condition);
+
+    Maiores informações: MDN : URL(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+*/
+
+
+    let resultado = ' ';
+    let inicio = 0;
+    do {
+        inicio += 1;
+        resultado += inicio + ' ';
+    } while (inicio < 5);
+
+    console.log(resultado);
+/*
+    #while
     A declaração while cria um laço que executa uma rotina especifica enquanto
     a condição de teste for avaliada como verdadeira. A condição é avaliada
     antes da execução da rotina.
 
+    Sintaxe
+    while (condição) {
+        rotina
+    }
+
     Maiores informações: MDN : URL(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while)
 */
 
-// exemplo 6
-function roleta(min, max) {
-    const numeros = Math.random() * (max - min) * 3.1415;
-    return Math.floor(numeros);
-}
-
-let min = 1;
-let max = 5;
-let numerosAleatorios = roleta(min, max);
-
-while (numerosAleatorios !== 10) {
-    numerosAleatorios = roleta(min, max);
-    console.log(numerosAleatorios);
-}
+//
+// // exemplo 6
+// function roleta(min, max) {
+//     const numeros = Math.random() * (max - min) * 3.1415;
+//     return Math.floor(numeros);
+// }
+//
+// let min = 1;
+// let max = 5;
+// let numerosAleatorios = roleta(min, max);
+//
+// while (numerosAleatorios !== 10) {
+//     numerosAleatorios = roleta(min, max);
+//     console.log(numerosAleatorios);
+// }
 
 
 // exemplo 5
