@@ -1,10 +1,10 @@
-var n = 0;
-var x = 0;
+// WHILE executa loops em torno de uma variável
+let x = 0;
+let y = 0;
 
-while (n < 10) {
-	n++;
-	x += n;
+while (x < 3) {
+	x++;
+	y += x;
 }
 
-console.log(n);
-console.log(x);
+console.log(x, y); // 3, 6
