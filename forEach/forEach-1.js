@@ -14,3 +14,4 @@ const forEachPetNames = []
 
 pets.forEach((pet) => {forEachPetNames.push(pet.name)});
 console.log('Nome dos animais da lista\n', forEachPetNames);
+console.log();
