@@ -1,1 +1,1 @@
-regularExpression-1.js
+alert('ola')
