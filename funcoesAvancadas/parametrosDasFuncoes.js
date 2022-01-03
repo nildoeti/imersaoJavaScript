@@ -27,16 +27,24 @@
 
 
 // exemplo 4
+// function minhaFuncao4(a, b, c) {
+// 	let total = 0;
+// 	for (let argumentos of arguments) {
+// 		total += argumentos;
+// 	}
+// 	console.log(total, a , b, c); // 52 1 2 3
+// }
 
-function minhaFuncao4(a, b, c) {
-	let total = 0;
-	for (let argumentos of arguments) {
-		total += argumentos;
-	}
-	console.log(total, a , b, c); // 52 1 2 3
-}
-
-minhaFuncao4(1, 2, 3, 4, 5, 6, 7, 7, 8, 9);
+// minhaFuncao4(1, 2, 3, 4, 5, 6, 7, 7, 8, 9);
 
 
 /* arguments em JavaScript, sustenta todos os argumentos da linguagem. */
+
+// exemplo 5
+function minhaFuncao5(a, b, c, d, e) {
+	console.log(a, b, c, d, e);
+}
+// JavaScript gera o valor padrão undefined, quando faltar valores para argumentos
+minhaFuncao5(1, 2, 3); // 1 2 3 undefined undefined
+
+
