@@ -41,10 +41,16 @@
 /* arguments em JavaScript, sustenta todos os argumentos da linguagem. */
 
 // exemplo 5
-function minhaFuncao5(a, b, c, d, e) {
-	console.log(a, b, c, d, e);
-}
-// JavaScript gera o valor padrão undefined, quando faltar valores para argumentos
-minhaFuncao5(1, 2, 3); // 1 2 3 undefined undefined
+// function minhaFuncao5(a, b, c, d, e) {
+// 	console.log(a, b, c, d, e);
+// }
+// // JavaScript gera o valor padrão undefined, quando faltar valores para argumentos
+// minhaFuncao5(1, 2, 3); // 1 2 3 undefined undefined
 
 
+// exemplo 6
+function minhaFuncao6(a, b) {
+ 	console.log(a + b);
+ } 
+
+minhaFuncao6(2); // NaN
