@@ -37,3 +37,6 @@ function minhaFuncao4(a, b, c) {
 }
 
 minhaFuncao4(1, 2, 3, 4, 5, 6, 7, 7, 8, 9);
+
+
+/* arguments em JavaScript, sustenta todos os argumentos da linguagem. */
