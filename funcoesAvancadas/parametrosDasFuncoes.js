@@ -199,11 +199,20 @@
 
 
 // exemplo 23
-const conta23 = function(operador, acumulador, numeros) {
-	// resolvendo o problema acima com function expression...
+const conta23 = function(operador, acumulador, ...numeros) {
+	/* 
+		Exemplo do mesmo problema acima, porém com uso de 
+		function expression.
+		function expression é uma função que faz uso de uma palavra chave que
+		define a função. 
+
+	*/
 	for (let numero of numeros) {
-		
-	}
-	console.log(acumulador);
- }
+		if (operador === '+') acumulador += numero;
+		if (operador === '-') acumulador -= numero;
+		if (operador === '*') acumulador *= numero;
+		if (operador === '/') acumulador /= numero;
+	} 
+console.log(acumulador);
+};
 conta23('/', 10, 20, 30, 40, 50);
