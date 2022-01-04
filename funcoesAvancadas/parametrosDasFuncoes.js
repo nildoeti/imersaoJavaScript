@@ -103,9 +103,18 @@
 // minhaFuncao13({nome: 'Fulano', sobreNome: 'de Tal', idade: 66});
 
 // exemplo 14
-function minhaFuncao14({nome, sobreNome, idade}) {
-	// uso de objetos como argumentos para desestruturação da função.
-	console.log(nome, sobreNome, idade + ' anos de idade');
+// function minhaFuncao14({nome, sobreNome, idade}) {
+// 	// uso de objetos como argumentos para desestruturação da função.
+// 	console.log(nome, sobreNome, idade + ' anos de idade');
+// }
+// let obj = {nome: 'Fulano', sobreNome: ' de Tal', idade: 14};
+// minhaFuncao14(obj);
+
+// exemplo 15
+function minhaFuncao15([argumento1, argumento2, argumento3, argumento4]) {
+	// desestruturação de array como argumentos para a função
+	console.log(argumento1, argumento2, argumento3, argumento4);
 }
-let obj = {nome: 'Fulano', sobreNome: ' de Tal', idade: 14};
-minhaFuncao14(obj)
+
+let arr = ['Fulano', ' de Tal', 22, ' anos de idade'];
+console.log(arr);
