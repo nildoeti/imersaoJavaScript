@@ -145,11 +145,21 @@
 // console.log(arr);
 
 // exemplo 19
-function conta4(operador, acumulador, ...numeros) {
-	// passando argumentos com for, para retornar os índices 
-	for (let numero in numeros) {
-		console.log(numero);
+// function conta4(operador, acumulador, ...numeros) {
+// 	// passando argumentos com for, para retornar os índices 
+// 	for (let numero in numeros) {
+// 		console.log(numero);
+// 	}
+// }
+
+// conta4('+', 0, 20, 30, 40, 50);
+
+// exemplo 20
+function conta5(operador, acumulador, ...numeros) {
+	// passando parâmetros com for, para retornar os valores dos argumentos
+	for (let index of numeros) {
+		console.log(index);
 	}
 }
 
-conta4('+', 0, 20, 30, 40, 50)
+conta5('+', 0, 20, 30, 40, 50);
