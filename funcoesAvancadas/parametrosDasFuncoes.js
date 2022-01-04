@@ -68,7 +68,13 @@
 // minhaFuncao8(2); // 14
 
 // exemplo 9
-function minhaFuncao9(a, b = 2, c = 4) {
+// function minhaFuncao9(a, b = 2, c = 4) {
+// 	console.log(a + b + c);
+// }
+// minhaFuncao9(2, 5); // b com novo valor = a 5
+
+// exemplo 10
+function minhaFuncao10(a, b = 2, c = 4) {
 	console.log(a + b + c);
 }
-minhaFuncao9(2, 5); // b com novo valor = a 5
+minhaFuncao10(2, '', 20); // 220 -> variável a, passa a ser uma string 
