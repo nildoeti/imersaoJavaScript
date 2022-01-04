@@ -95,8 +95,17 @@
 // // null, assume 0 em b
 // minhaFuncao12(2, null, 20); // 22 
 
+// exemplo 13
 // argumentos por desestruturação
-function minhaFuncao13({nome, sobreNome, idade}) {
+// function minhaFuncao13({nome, sobreNome, idade}) {
+// 	console.log(nome, sobreNome, idade + ' anos de idade');
+// }
+// minhaFuncao13({nome: 'Fulano', sobreNome: 'de Tal', idade: 66});
+
+// exemplo 14
+function minhaFuncao14({nome, sobreNome, idade}) {
+	// uso de objetos como argumentos para desestruturação da função.
 	console.log(nome, sobreNome, idade + ' anos de idade');
 }
-minhaFuncao13({nome: 'Fulano', sobreNome: 'de Tal', idade: 66});
+let obj = {nome: 'Fulano', sobreNome: ' de Tal', idade: 14};
+minhaFuncao14(obj)
