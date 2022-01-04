@@ -49,8 +49,14 @@
 
 
 // exemplo 6
-function minhaFuncao6(a, b) {
- 	console.log(a + b);
- } 
+// function minhaFuncao6(a, b) {
+//  	console.log(a + b);
+//  } 
 
-minhaFuncao6(2); // NaN
+// minhaFuncao6(2); // NaN
+
+// exemplo 7
+function minhaFuncao7(a, b = 2) {
+	console.log(a + b);
+}
+minhaFuncao7(2); // 4install
