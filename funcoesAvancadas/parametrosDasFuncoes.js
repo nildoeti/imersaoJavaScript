@@ -155,11 +155,22 @@
 // conta4('+', 0, 20, 30, 40, 50);
 
 // exemplo 20
-function conta5(operador, acumulador, ...numeros) {
-	// passando parâmetros com for, para retornar os valores dos argumentos
+// function conta5(operador, acumulador, ...numeros) {
+// 	// passando parâmetros com for, para retornar os valores dos argumentos
+// 	for (let index of numeros) {
+// 		console.log(index);
+// 	}
+// }
+
+// conta5('+', 0, 20, 30, 40, 50);
+
+// exemplo 21
+function conta6(operador, acumulador, ...numeros) {
+	// passando instruçao com o laço for e somar todos os valores do parametros da função
 	for (let index of numeros) {
-		console.log(index);
+		acumulador += index;
 	}
+	console.log(acumulador);
 }
 
-conta5('+', 0, 20, 30, 40, 50);
+conta6('+', 0, 20, 30, 40, 50);
