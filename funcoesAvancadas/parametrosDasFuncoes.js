@@ -62,7 +62,13 @@
 // minhaFuncao7(2); //
 
 // exemplo 8
-function minhaFuncao8(a, b = 4, c = 8) {
+// function minhaFuncao8(a, b = 4, c = 8) {
+// 	console.log(a + b + c);
+// }
+// minhaFuncao8(2); // 14
+
+// exemplo 9
+function minhaFuncao9(a, b = 2, c = 4) {
 	console.log(a + b + c);
 }
-minhaFuncao8(2); // 14
+minhaFuncao9(2, 5); // b com novo valor = a 5
