@@ -137,9 +137,20 @@
 // console.log(arr);
 
 // exemplo 18
-function conta3(operador, contador, ...numeros) {
-	// passando argumentos por operdor de rest
-	console.log(operador, contador, numeros);
+// function conta3(operador, contador, ...numeros) {
+// 	// passando argumentos por operdor de rest
+// 	console.log(operador, contador, numeros);
+// }
+// let arr = ['+', 0, 20, 30, 40, 50];
+// console.log(arr);
+
+// exemplo 19
+function conta4(operador, contador, ...numeros) {
+	// passando funcionalidade para a função para retorno dos índices
+	for (let numero of numeros) {
+		console.log(numero);
+	}
+
 }
 let arr = ['+', 0, 20, 30, 40, 50];
-console.log(arr);
+conta4(arr);
