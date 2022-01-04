@@ -74,7 +74,15 @@
 // minhaFuncao9(2, 5); // b com novo valor = a 5
 
 // exemplo 10
-function minhaFuncao10(a, b = 2, c = 4) {
+// function minhaFuncao10(a, b = 2, c = 4) {
+// 	console.log(a + b + c);
+// }
+// minhaFuncao10(2, '', 20); // 220 -> variável a, passa a ser uma string
+//  
+
+// exemplo 11
+function minhaFuncao11(a, b = 2, c = 4) {
 	console.log(a + b + c);
 }
-minhaFuncao10(2, '', 20); // 220 -> variável a, passa a ser uma string 
+// undefined assume valor padrão para a variável b
+minhaFuncao11(2, undefined, 10); // 14
