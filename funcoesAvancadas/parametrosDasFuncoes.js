@@ -145,12 +145,12 @@
 // console.log(arr);
 
 // exemplo 19
-function conta4(operador, contador, ...numeros) {
-	// passando funcionalidade para a função para retorno dos índices
+function conta4(operador, acumulador, ...numeros) {
+	// passando argumentos com uso do laço for
 	for (let numero of numeros) {
 		console.log(numero);
 	}
-
 }
-let arr = ['+', 0, 20, 30, 40, 50];
+// conta4('+', 0, 20, 30, 40, 50)
+let arr = ('+', 0, 20, 30, 40, 50);
 conta4(arr);
