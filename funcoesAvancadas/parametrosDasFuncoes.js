@@ -89,8 +89,14 @@
 
 
 // exemplo 12
-function minhaFuncao12(a, b = 2, c = 4) {
-	console.log(a + b + c);
+// function minhaFuncao12(a, b = 2, c = 4) {
+// 	console.log(a + b + c);
+// }
+// // null, assume 0 em b
+// minhaFuncao12(2, null, 20); // 22 
+
+// argumentos por desestruturação
+function minhaFuncao13({nome, sobreNome, idade}) {
+	console.log(nome, sobreNome, idade + ' anos de idade');
 }
-// null, assume 0 em b
-minhaFuncao12(2, null, 20); // 22 
+minhaFuncao13({nome: 'Fulano', sobreNome: 'de Tal', idade: 66});
