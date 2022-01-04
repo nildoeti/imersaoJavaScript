@@ -81,8 +81,16 @@
 //  
 
 // exemplo 11
-function minhaFuncao11(a, b = 2, c = 4) {
+// function minhaFuncao11(a, b = 2, c = 4) {
+// 	console.log(a + b + c);
+// }
+// // undefined assume valor padrão para a variável b
+// minhaFuncao11(2, undefined, 10); // 14
+
+
+// exemplo 12
+function minhaFuncao12(a, b = 2, c = 4) {
 	console.log(a + b + c);
 }
-// undefined assume valor padrão para a variável b
-minhaFuncao11(2, undefined, 10); // 14
+// null, assume 0 em b
+minhaFuncao12(2, null, 20); // 22 
