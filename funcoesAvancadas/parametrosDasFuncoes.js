@@ -111,10 +111,18 @@
 // minhaFuncao14(obj);
 
 // exemplo 15
-function minhaFuncao15([argumento1, argumento2, argumento3, argumento4]) {
-	// desestruturação de array como argumentos para a função
-	console.log(argumento1, argumento2, argumento3, argumento4);
-}
+// function minhaFuncao15([argumento1, argumento2, argumento3, argumento4]) {
+// 	// desestruturação de array como argumentos para a função
+// 	console.log(argumento1, argumento2, argumento3, argumento4);
+// }
 
-let arr = ['Fulano', ' de Tal', 22, ' anos de idade'];
-console.log(arr);
+// let arr = ['Fulano', ' de Tal', 22, ' anos de idade'];
+// console.log(arr);	
+
+// exemplo 16
+function conta(operador, acumuldor, numeros) {
+	// passando argumentos por arry's dentro de array's
+	console.log(operador, acumuldor, numeros);
+}
+let paramentros = ['+', 0, [10, 20, 30, 40]];
+conta(paramentros)
