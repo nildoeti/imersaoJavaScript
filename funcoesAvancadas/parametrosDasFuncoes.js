@@ -128,10 +128,18 @@
 // conta(paramentros)
 
 // exemplo 17
-function conta2(operador, acumulador, numeros) {
-	console.log(operador, acumulador, numeros);
-}
+// function conta2(operador, acumulador, numeros) {
+// 	console.log(operador, acumulador, numeros);
+// }
 
-// passando argumentos por arry's simples 
-const arr = ['+', 0, 10, 20, 30, 40, 50]
+// // passando argumentos por arry's simples 
+// const arr = ['+', 0, 10, 20, 30, 40, 50]
+// console.log(arr);
+
+// exemplo 18
+function conta3(operador, contador, ...numeros) {
+	// passando argumentos por operdor de rest
+	console.log(operador, contador, numeros);
+}
+let arr = ['+', 0, 20, 30, 40, 50];
 console.log(arr);
