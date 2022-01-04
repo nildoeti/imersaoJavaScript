@@ -165,12 +165,34 @@
 // conta5('+', 0, 20, 30, 40, 50);
 
 // exemplo 21
-function conta6(operador, acumulador, ...numeros) {
-	// passando instruçao com o laço for e somar todos os valores do parametros da função
-	for (let index of numeros) {
-		acumulador += index;
+// function conta6(operador, acumulador, ...numeros) {
+// 	// passando instruçao com o laço for e somar todos os valores do parametros da função
+// 	for (let index of numeros) {
+// 		acumulador += index;
+// 	}
+// 	console.log(acumulador);
+// }
+
+// conta6('+', 0, 20, 30, 40, 50);
+
+// exemplo 22
+function conta22(operador, acumulador, ...numeros) {
+	/*
+		IMPORTANTE
+		Sempre que fizer uso do operador rest, sempre sempre e sempre
+		usa-lo como ultimo argumento.
+		O motivo é que ele sempre retorna o resto dos argumentos inseridos
+		na função. 
+		Caso contrário, JavaScript retornará o erro:
+		SyntaxError: Rest parameter must be last formal parameter
+	*/
+	for (let numero of numeros) {
+		if (operador === '+') acumulador += numero;
+		if (operador === '-') acumulador -= numero;
+		if (operador === '*') acumulador *= numero;
+		if (operador === '/') acumulador /= numero;
 	}
 	console.log(acumulador);
 }
 
-conta6('+', 0, 20, 30, 40, 50);
+conta22('/', 10, 20, 30, 40, 50);
