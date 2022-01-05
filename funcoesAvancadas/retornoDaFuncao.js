@@ -75,18 +75,37 @@
 // console.log(resto); // Olá mundo
 
 // exemplo 8
-function duplica(n) {
-	return n * 2;
+// function duplica(n) {
+// 	return n * 2;
+// }
+
+// function triplica(n) {
+// 	return n * 3;
+// }
+
+// function quadriplica(n) {
+// 	return n * 4;
+// }
+
+// console.log(duplica(2));
+// console.log(triplica(2));
+// console.log(quadriplica(2));
+
+// exemplo 9 com base no modelo anteior
+	/*
+		Closures
+		Um closure (fechamento) é uma função que se "lembra" do ambiente — ou 
+		escopo léxico — em que ela foi criada.
+		Fonte MDN: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Closures)
+	*/
+function criaMultiplicador(multiplicador) {
+	return function(n) {
+		return n * multiplicador;
+	};
 }
 
-function triplica(n) {
-	return n * 3;
-}
+const duplica = criaMultiplicador(2);
+const triplica = criaMultiplicador(3);
+const quadriplica = criaMultiplicador(4);
 
-function quadriplica(n) {
-	return n * 4;
-}
-
-console.log(duplica(2));
-console.log(triplica(2));
-console.log(quadriplica(2));
+console.log(duplica(2), triplica(2), quadriplica(2));
