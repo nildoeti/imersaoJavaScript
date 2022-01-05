@@ -41,3 +41,7 @@ const criaPessoa2 = {
 }
 
 console.log(criaPessoa2);
+
+console.log(typeof p1);
+console.log(typeof criaPessoa2);
+
