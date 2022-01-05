@@ -199,20 +199,42 @@
 
 
 // exemplo 23
-const conta23 = function(operador, acumulador, ...numeros) {
-	/* 
-		Exemplo do mesmo problema acima, porém com uso de 
-		function expression.
-		function expression é uma função que faz uso de uma palavra chave que
-		define a função. 
+// const conta23 = function(operador, acumulador, ...numeros) {
+// 	/* 
+// 		Exemplo do mesmo problema acima, porém com uso de 
+// 		function expression.
+// 		function expression é uma função que faz uso de uma palavra chave que
+// 		define a função. 
 
+// 	*/
+// 	for (let numero of numeros) {
+// 		if (operador === '+') acumulador += numero;
+// 		if (operador === '-') acumulador -= numero;
+// 		if (operador === '*') acumulador *= numero;
+// 		if (operador === '/') acumulador /= numero;
+// 	} 
+// console.log(acumulador);
+// };
+// conta23('/', 10, 20, 30, 40, 50);
+
+// exemolo 24
+const conta24 = (operador, acumulador, ...numeros) => {
+	/*
+		Resolução do problema com uso de Arrow functions.
+		Uma expressão arrow function possui uma sintaxe mais curta quando 
+		comparada a uma expressão de função (function expression) e não tem seu 
+		próprio this, arguments, super ou new.target. Estas expressões de 
+		funções são melhor aplicadas para funções que não sejam métodos, e 
+		elas não podem ser usadas como construtoras (constructors).
+		Fonte MDN Web Doc: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 	*/
 	for (let numero of numeros) {
 		if (operador === '+') acumulador += numero;
 		if (operador === '-') acumulador -= numero;
 		if (operador === '*') acumulador *= numero;
 		if (operador === '/') acumulador /= numero;
-	} 
-console.log(acumulador);
+	}
+	console.log(acumulador);
 };
-conta23('/', 10, 20, 30, 40, 50);
+
+conta24('+', 10, 20, 30, 40, 50);
