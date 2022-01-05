@@ -26,9 +26,18 @@
 	//document.bady.style.backgroundColor('red');
 //});
 
+// exemplo 4
 function criaPessoa(nome, sobreNome) {
 	// função que retorna um objeto
 	return {nome, sobreNome};
 }
 const p1 = criaPessoa('Fulano', 'de Tal');
 console.log(p1);
+
+// exemplo 5
+const criaPessoa2 = {
+	nome: 'Fulano',
+	sobreNome: 'de Tal'
+}
+
+console.log(criaPessoa2);
