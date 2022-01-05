@@ -13,11 +13,22 @@
 // console.log(result);
 
 // exemplo 2
-function soma2(a, b) {
-	// exemolo de função inutil
-	console.log(a + b); 
+//function soma2(a, b) {
+	//// exemolo de função inutil
+	//console.log(a + b); 
+//}
+
+//~ soma2(4, 7); 
+
+// exemplo 3
+//document.addEventListener('click', function(){
+	//// exemplo de função que não rtorna ND, mas faz alguma coisa
+	//document.bady.style.backgroundColor('red');
+//});
+
+function criaPessoa(nome, sobreNome) {
+	// função que retorna um objeto
+	return {nome, sobreNome};
 }
-
-soma2(4, 7); 
-
-
+const p1 = criaPessoa('Fulano', 'de Tal');
+console.log(p1);
