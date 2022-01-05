@@ -27,21 +27,35 @@
 //});
 
 // exemplo 4
-function criaPessoa(nome, sobreNome) {
-	// função que retorna um objeto
-	return {nome, sobreNome};
+// function criaPessoa(nome, sobreNome) {
+// 	// função que retorna um objeto
+// 	return {nome, sobreNome};
+// }
+// const p1 = criaPessoa('Fulano', 'de Tal');
+// console.log(p1);
+
+// // exemplo 5
+// const criaPessoa2 = {
+// 	nome: 'Fulano',
+// 	sobreNome: 'de Tal'
+// }
+
+// console.log(criaPessoa2);
+
+// console.log(typeof p1);
+// console.log(typeof criaPessoa2);
+
+
+// exemplo 6
+function falaFrase(comeco) {
+	function falaResto(resto) {
+		return comeco + ' - ' + resto; // aqui retorna para função falaResto()
+	}
+	return falaResto; // aqui retorna para função falaFrase()
+	// return falaFrase; // aqui retorna para a função falaFrase()
 }
-const p1 = criaPessoa('Fulano', 'de Tal');
-console.log(p1);
 
-// exemplo 5
-const criaPessoa2 = {
-	nome: 'Fulano',
-	sobreNome: 'de Tal'
-}
-
-console.log(criaPessoa2);
-
-console.log(typeof p1);
-console.log(typeof criaPessoa2);
-
+const p1 = falaFrase('olá começo');
+console.log(p1); // [Function: falaResto]
+console.log(p1()); // olá começo - undefined
+console.log(p1('mensagem para função falaResto()')); // olá começo - mensagem para função falaResto()
