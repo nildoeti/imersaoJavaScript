@@ -47,15 +47,28 @@
 
 
 // exemplo 6
-function falaFrase(comeco) {
+// function falaFrase(comeco) {
+// 	function falaResto(resto) {
+// 		return comeco + ' - ' + resto; // aqui retorna para função falaResto()
+// 	}
+// 	return falaResto; // aqui retorna para função falaFrase()
+// 	// return falaFrase; // aqui retorna para a função falaFrase()
+// }
+
+// const p1 = falaFrase('olá começo');
+// console.log(p1); // [Function: falaResto]
+// console.log(p1()); // olá começo - undefined
+// console.log(p1('mensagem para função falaResto()')); // olá começo - mensagem para função falaResto()
+
+function falaFrase(começo) {
 	function falaResto(resto) {
-		return comeco + ' - ' + resto; // aqui retorna para função falaResto()
+		return comeco + ' ' + resto;
 	}
-	return falaResto; // aqui retorna para função falaFrase()
-	// return falaFrase; // aqui retorna para a função falaFrase()
+	return falaResto;
 }
 
-const p1 = falaFrase('olá começo');
-console.log(p1); // [Function: falaResto]
-console.log(p1()); // olá começo - undefined
-console.log(p1('mensagem para função falaResto()')); // olá começo - mensagem para função falaResto()
+const fala = falaFrase('Olá');
+const resto = fala('mundo');
+
+console.log(resto); // Olá mundo
+
