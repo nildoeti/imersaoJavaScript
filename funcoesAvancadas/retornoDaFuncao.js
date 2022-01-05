@@ -9,7 +9,7 @@
 // 	return a + b; // retorno da função aqui
 // }
 // // chamada da função aqui com dados sendo armazenados em uma variável
-// let result = minhaFuncao(2, 4); 
+// let result        = minhaFuncao(2, 4);
 // console.log(result);
 
 // exemplo 2
@@ -31,7 +31,7 @@
 // 	// função que retorna um objeto
 // 	return {nome, sobreNome};
 // }
-// const p1 = criaPessoa('Fulano', 'de Tal');
+// const p1          = criaPessoa('Fulano', 'de Tal');
 // console.log(p1);
 
 // // exemplo 5
@@ -55,20 +55,38 @@
 // 	// return falaFrase; // aqui retorna para a função falaFrase()
 // }
 
-// const p1 = falaFrase('olá começo');
+// const p1          = falaFrase('olá começo');
 // console.log(p1); // [Function: falaResto]
 // console.log(p1()); // olá começo - undefined
 // console.log(p1('mensagem para função falaResto()')); // olá começo - mensagem para função falaResto()
 
-function falaFrase(começo) {
-	function falaResto(resto) {
-		return comeco + ' ' + resto;
-	}
-	return falaResto;
+
+// // exemplo 7
+// function falaFrase(começo) {
+// 	function falaResto(resto) {
+// 		return comeco + ' ' + resto;
+// 	}
+// 	return falaResto;
+// }
+
+// const fala        = falaFrase('Olá');
+// const resto       = fala('mundo');
+
+// console.log(resto); // Olá mundo
+
+// exemplo 8
+function duplica(n) {
+	return n * 2;
 }
 
-const fala = falaFrase('Olá');
-const resto = fala('mundo');
+function triplica(n) {
+	return n * 3;
+}
 
-console.log(resto); // Olá mundo
+function quadriplica(n) {
+	return n * 4;
+}
 
+console.log(duplica(2));
+console.log(triplica(2));
+console.log(quadriplica(2));
