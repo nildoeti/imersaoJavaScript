@@ -218,23 +218,27 @@
 // conta23('/', 10, 20, 30, 40, 50);
 
 // exemolo 24
-const conta24 = (operador, acumulador, ...numeros) => {
-	/*
-		Resolução do problema com uso de Arrow functions.
-		Uma expressão arrow function possui uma sintaxe mais curta quando 
-		comparada a uma expressão de função (function expression) e não tem seu 
-		próprio this, arguments, super ou new.target. Estas expressões de 
-		funções são melhor aplicadas para funções que não sejam métodos, e 
-		elas não podem ser usadas como construtoras (constructors).
-		Fonte MDN Web Doc: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-	*/
-	for (let numero of numeros) {
-		if (operador === '+') acumulador += numero;
-		if (operador === '-') acumulador -= numero;
-		if (operador === '*') acumulador *= numero;
-		if (operador === '/') acumulador /= numero;
-	}
-	console.log(acumulador);
-};
+// const conta24 = (operador, acumulador, ...numeros) => {
+	
+// 		Resolução do problema com uso de Arrow functions.
+// 		Uma expressão arrow function possui uma sintaxe mais curta quando 
+// 		comparada a uma expressão de função (function expression) e não tem seu 
+// 		próprio this, arguments, super ou new.target. Estas expressões de 
+// 		funções são melhor aplicadas para funções que não sejam métodos, e 
+// 		elas não podem ser usadas como construtoras (constructors).
+// 		Fonte MDN Web Doc: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+	
+// 	for (let numero of numeros) {
+// 		if (operador === '+') acumulador += numero;
+// 		if (operador === '-') acumulador -= numero;
+// 		if (operador === '*') acumulador *= numero;
+// 		if (operador === '/') acumulador /= numero;
+// 	}
+// 	console.log(acumulador);
+// };
 
-conta24('+', 10, 20, 30, 40, 50);
+// conta24('+', 10, 20, 30, 40, 50);
+
+// exemplo 25
+const conta25 = (...args) => {console.log(args);};
+conta25('+', 10, 20, 30, 40, 50);
