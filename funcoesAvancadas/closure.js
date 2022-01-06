@@ -62,9 +62,19 @@
 const makeAdder = (x) => {
 	return (y) => {
 		return x + y
+		/*
+			Neste exemplo definimos a função makeAdder(x) que toma um único 
+			argumento x e retorna uma nova função. A função retornada toma 
+			então um único argumento, y, e retorna então a soma de x e de y.
+		*/
 	};
 }
 
+/*
+	Ambas as funções add5 e add10 são closures. Compartilham o mesmo corpo de 
+	definição de função mas armazenam diferentes ambientes. No ambiente da add5, 
+	por exemplo, x equivale a 5, enquanto na add10 o valor de x é 10.
+*/
 const addr5 = makeAdder(5);
 const add10 = makeAdder(10);
 
