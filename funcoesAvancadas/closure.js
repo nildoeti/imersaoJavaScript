@@ -34,7 +34,7 @@
 // 	return displayName;
 // }
 	
-// 		variável myFun tourna-se uma função e por consequeẽncia de sua natureza,
+// 		variável myFun tourna-se uma função e por consequẽncia de sua natureza,
 // 		também se torna uma closure.
 // 		Uma closure (fechamento) trata-se de um tipo especial de objeto que combina 
 // 		duas coisas: a função e o ambiente onde a função foi criada.
@@ -46,14 +46,27 @@
 
 
 // exemplo função makeAdder
-function makeAdder(x) {
+// function makeAdder(x) {
+// 	return (y) => {
+// 		return x + y
+// 	};
+// }
+
+// var addr5 = makeAdder(5);
+// var addr10 = makeAdder(10);
+
+// console.log(addr5(2));
+// console.log(addr10(2));
+
+// exemplo com arrow function
+const makeAdder = (x) => {
 	return (y) => {
 		return x + y
 	};
 }
 
-var addr5 = makeAdder(5);
-var addr10 = makeAdder(10);
+const addr5 = makeAdder(5);
+const add10 = makeAdder(10);
 
 console.log(addr5(2));
-console.log(addr10(2));
+console.log(add10(2));
