@@ -26,22 +26,34 @@
 
 
 // exemplo para Closure
-function makeFun() {
-	var name = 'Mozilla';
-	function displayName() {
-		console.log(name);
-	}
-	return displayName;
+// function makeFun() {
+// 	var name = 'Mozilla';
+// 	function displayName() {
+// 		console.log(name);
+// 	}
+// 	return displayName;
+// }
+	
+// 		variável myFun tourna-se uma função e por consequeẽncia de sua natureza,
+// 		também se torna uma closure.
+// 		Uma closure (fechamento) trata-se de um tipo especial de objeto que combina 
+// 		duas coisas: a função e o ambiente onde a função foi criada.
+// 		myFunc é a closure que incorpora tanto a função displayName quanto a 
+// 		palavra Mozilla que existia quando a closure foi criada.
+	
+// var myFun = makeFun(); 
+// console.log(myFun);
+
+
+// exemplo função makeAdder
+function makeAdder(x) {
+	return (y) => {
+		return x + y
+	};
 }
-	/*
-		variável myFun tourna-se uma função e por consequeẽncia de sua natureza,
-		também se torna uma closure.
-		Uma closure (fechamento) trata-se de um tipo especial de objeto que combina 
-		duas coisas: a função e o ambiente onde a função foi criada.
-		myFunc é a closure que incorpora tanto a função displayName quanto a 
-		palavra Mozilla que existia quando a closure foi criada.
-	*/
-var myFun = makeFun(); 
-console.log(myFun);
 
+var addr5 = makeAdder(5);
+var addr10 = makeAdder(10);
 
+console.log(addr5(2));
+console.log(addr10(2));
