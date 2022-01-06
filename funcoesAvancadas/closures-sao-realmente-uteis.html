@@ -3,9 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Esta é a teoria — mas closures são realmente úteis?</title>
 </head>
 <body>
+	<section class="section-1">
+		<h1>Closures na prática</h1>
+		<p>
+			Esta é a teoria — mas closures são realmente úteis? Vamos considerar suas aplicações práticas. Uma closure deixa você associar dados (do ambiente) com uma função que trabalha estes dados. Isto está diretamente ligado com programação orientada a objetos, onde objetos nos permitem associar dados (as propriedades do objeto) utilizando um ou mais métodos.
+		</p>
 
+		<p>
+			Consequentemente, você pode utilizar uma closure em qualquer lugar onde você normalmente utilizaria um objeto de único método.
+		</p>
+		<P>
+			Situações onde você poderia utilizar isto são comuns em ambientes web. Muitos códigos escritos em JavaScript para web são baseados em eventos - nós definimos algum comportamento e então, o atribuimos a um evento que será disparado pelo usuário (quando uma tecla for pressionada, por exemplo). Nosso código normalmente é utilizado como callback: uma função que será executada como resposta ao evento.
+		</P>
+
+		<P>
+			Aqui temos um exemplo prático: suponha que queremos adicionar alguns botões para ajustar o tamanho do texto de uma página. Um jeito de fazer seria especificar o tamanho da fonte no elemento body e então definir o tamanho dos outros elementos da página (os cabeçalhos, por exemplo) utilizando a unidade relativa em:
+		</P>
+
+		<code>
+			<a href="#" id="size-12">12</a>
+			<a href="#" id="size-14">14</a>
+			<a href="#" id="size-16">16</a>
+		</code>
+	</section>
+
+	<script type="text/javascript" src="closures-sao-realmente-uteis.js"></script>
 </body>
 </html>
