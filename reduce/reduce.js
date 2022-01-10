@@ -49,7 +49,23 @@
 
 
 // na prática
-const sum = [1, 2, 3, 4, 5].reduce(function(acumulador, valorAtual, Index, array) {
-	return acumulador + valorAtual;
-});
-console.log(sum); // 15
+// const sum = [1, 2, 3, 4, 5].reduce(function(acumulador, valorAtual, Index, array) {
+// 	return acumulador + valorAtual;
+// });
+// console.log(sum); // 15
+
+/*
+	O callback será invocado quatro vezes, com os argumentos e valores em cada chamada  sendo:
+
+						acumulador 		valorAtual 	index 	array 			valor de retorno
+	primeira chamada    	0 		 		1 		  1 	[0, 1, 2, 3, 4]     1
+	segunda chamada 		1 				2 		  2 	[0, 1, 2, 3, 4] 	3
+	terceira chamada 		3 				3 		  3 	[0, 1, 2, 3, 4] 	6
+	quarta chamada 			6 				4 		  4 	[0, 1, 2, 3, 4] 	10
+
+*/
+
+
+// exemplo com arrow function
+const resultReduce = [1, 2, 3, 4].reduce( (acumulador, valorAtual) => acumulador + valorAtual);
+console.log(resultReduce); // 10 
