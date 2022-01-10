@@ -87,3 +87,13 @@ console.log(resultReduce2); // 20
 */
 
 
+/*
+	Exemplo 1
+	Soma todos os valores de uma array
+*/
+
+let total = [0, 1, 2, 3].reduce( function(acumulador, valorAtual) {
+	return valorAtual + acumulador;
+});
+
+console.log(total);
