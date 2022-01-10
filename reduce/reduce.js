@@ -32,17 +32,24 @@
  */
 
 // exemplo 1
-var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
-var maxCallback2 = ( max, cur ) => Math.max( max, cur );
+// var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+// var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 
-// reduce() sem valores iniciais
-let result1 = [ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
-let result2 = [ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
-// [                      ].reduce( maxCallback ); // TypeError 
+// // reduce() sem valores iniciais
+// let result1 = [ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
+// let result2 = [ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
+// // [                      ].reduce( maxCallback ); // TypeError 
 
-console.log(result1, result2);
+// console.log(result1, result2);
 
 // exemplo 2
-// map/reduce; melhor solução, funciona para vetores vazios e tambem para vetores grandes
-[ {x: 22}, {x: 42} ].map( el => el.x );
-										.reduce(maxCallback2, -Infinity );
+// // map/reduce; melhor solução, funciona para vetores vazios e tambem para vetores grandes
+// [ {x: 22}, {x: 42} ].map( el => el.x );
+// 										.reduce(maxCallback2, -Infinity );
+
+
+// na prática
+const sum = [1, 2, 3, 4, 5].reduce(function(acumulador, valorAtual, Index, array) {
+	return acumulador + valorAtual;
+});
+console.log(sum); // 15
