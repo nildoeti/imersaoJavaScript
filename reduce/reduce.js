@@ -96,4 +96,11 @@ let total = [0, 1, 2, 3].reduce( function(acumulador, valorAtual) {
 	return valorAtual + acumulador;
 });
 
-console.log(total);
+console.log(total); // 6
+
+// usar uma arrow function para a soma de todos os valores de uma array:
+let total2 = [0, 1, 2, 3, 4].reduce(
+		(acumulador, valorAtual) => acumulador + valorAtual, 0.6
+	);
+
+console.log(total2); // 10
