@@ -67,15 +67,15 @@
 
 
 // exemplo com arrow function
-const resultReduce = [0, 1, 2, 3, 4].reduce( ( acumulador, valorAtual ) => acumulador + valorAtual);
-console.log(resultReduce); // 10 
+// const resultReduce = [0, 1, 2, 3, 4].reduce( ( acumulador, valorAtual ) => acumulador + valorAtual);
+// console.log(resultReduce); // 10 
 
-// exemplo para valor valorInicial
-const resultReduce2 = [0, 1, 2, 3, 4].reduce( function(acumulador, valorAtual, indice, array) {
-	return acumulador + valorAtual;
-}, 10);
+// // exemplo para valor valorInicial
+// const resultReduce2 = [0, 1, 2, 3, 4].reduce( function(acumulador, valorAtual, indice, array) {
+// 	return acumulador + valorAtual;
+// }, 10);
 
-console.log(resultReduce2); // 20
+// console.log(resultReduce2); // 20
 
 /*
 	callback 				acumulador 	valorAtual 	index 	array 				valor de retorno
@@ -92,15 +92,30 @@ console.log(resultReduce2); // 20
 	Soma todos os valores de uma array
 */
 
-let total = [0, 1, 2, 3].reduce( function(acumulador, valorAtual) {
-	return valorAtual + acumulador;
-});
+// let total = [0, 1, 2, 3].reduce( function(acumulador, valorAtual) {
+// 	return valorAtual + acumulador;
+// });
 
-console.log(total); // 6
+// console.log(total); // 6
 
-// usar uma arrow function para a soma de todos os valores de uma array:
-let total2 = [0, 1, 2, 3, 4].reduce(
-		(acumulador, valorAtual) => acumulador + valorAtual, 0.6
-	);
+// // usar uma arrow function para a soma de todos os valores de uma array:
+// let total2 = [0, 1, 2, 3, 4].reduce(
+// 		(acumulador, valorAtual) => acumulador + valorAtual, 0.6
+// 	);
 
-console.log(total2); // 10
+// console.log(total2); // 10
+
+
+/*
+	Soma de valores de um objeto de um array
+
+	Para resumir os valores contidos em um array, você deve fornecer um 
+	valorInicial, para que cada item passe por sua função.
+*/
+
+let valorInicial = 0;
+let soma = [{x: 1}, {x: 2}, {x: 3}].reduce(function (acumulador, valorAtual) {
+	return acumulador + valorAtual.x;
+}, valorInicial);
+
+console.log(soma);
