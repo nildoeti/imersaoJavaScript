@@ -42,3 +42,7 @@ let result2 = [ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
 
 console.log(result1, result2);
 
+// exemplo 2
+// map/reduce; melhor solução, funciona para vetores vazios e tambem para vetores grandes
+[ {x: 22}, {x: 42} ].map( el => el.x );
+										.reduce(maxCallback2, -Infinity );
