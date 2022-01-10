@@ -31,7 +31,8 @@
 	array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]))
  */
 
- var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+// exemplo 1
+var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
 var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 
 // reduce() sem valores iniciais
@@ -40,3 +41,4 @@ let result2 = [ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
 // [                      ].reduce( maxCallback ); // TypeError 
 
 console.log(result1, result2);
+
