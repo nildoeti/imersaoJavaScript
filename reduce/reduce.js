@@ -57,15 +57,33 @@
 /*
 	O callback será invocado quatro vezes, com os argumentos e valores em cada chamada  sendo:
 
-						acumulador 		valorAtual 	index 	array 			valor de retorno
-	primeira chamada    	0 		 		1 		  1 	[0, 1, 2, 3, 4]     1
-	segunda chamada 		1 				2 		  2 	[0, 1, 2, 3, 4] 	3
-	terceira chamada 		3 				3 		  3 	[0, 1, 2, 3, 4] 	6
-	quarta chamada 			6 				4 		  4 	[0, 1, 2, 3, 4] 	10
+							acumulador 		valorAtual 	 index 		array 				valor de retorno
+	primeira chamada    	0 		 			1 		 		1 			[0, 1, 2, 3, 4]    		1
+	segunda chamada 		1 					2 			   2 			[0, 1, 2, 3, 4] 			3
+	terceira chamada 		3 					3 			   3		 	[0, 1, 2, 3, 4] 			6
+	quarta chamada 		6 					4 			   4 			[0, 1, 2, 3, 4] 			10
 
 */
 
 
 // exemplo com arrow function
-const resultReduce = [1, 2, 3, 4].reduce( (acumulador, valorAtual) => acumulador + valorAtual);
+const resultReduce = [0, 1, 2, 3, 4].reduce( ( acumulador, valorAtual ) => acumulador + valorAtual);
 console.log(resultReduce); // 10 
+
+// exemplo para valor valorInicial
+const resultReduce2 = [0, 1, 2, 3, 4].reduce( function(acumulador, valorAtual, indice, array) {
+	return acumulador + valorAtual;
+}, 10);
+
+console.log(resultReduce2); // 20
+
+/*
+	callback 				acumulador 	valorAtual 	index 	array 				valor de retorno
+	primeira chamada 			10 			0 				0 		[0, 1, 2, 3, 4] 			10
+	segunda chamada 			10 			1 				1 		[0, 1, 2, 3, 4] 			11
+	terceira chamada 			11 			2 				2 		[0, 1, 2, 3, 4] 			13
+	quarta chamada 			13 			3 				3 		[0, 1, 2, 3, 4] 			16
+	quinta chamada 			16 			4 				4 		[0, 1, 2, 3, 4] 			20
+*/
+
+
