@@ -113,9 +113,21 @@
 	valorInicial, para que cada item passe por sua função.
 */
 
-let valorInicial = 0;
-let soma = [{x: 1}, {x: 2}, {x: 3}].reduce(function (acumulador, valorAtual) {
-	return acumulador + valorAtual.x;
-}, valorInicial);
+// let valorInicial = 0;
+// let soma = [{x: 1}, {x: 2}, {x: 3}].reduce(function (acumulador, valorAtual) {
+// 	return acumulador + valorAtual.x;
+// }, valorInicial);
 
+// console.log(soma);
+
+
+// resumir os valores contidos em um array utilizando uma arrow function:
+
+const valorInicial = 0;
+const soma = [ {x: 1}, {x: 2}, {x: 3} ].reduce(
+		(acumulador, valorAtual) => acumulador + valorAtual.x
+		, valorInicial
+	);
+
+const result = soma;
 console.log(soma);
