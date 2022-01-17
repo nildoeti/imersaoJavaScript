@@ -1,0 +1,14 @@
+/*
+	font MDN url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
+*/
+
+// Strict mode para funções
+function stric () {
+	// Sintaxe strict mode a nível de função
+	"use strict";
+	function nexted() { return 'E eu tambem.'; }
+	return 'Oi! Eu sou uma funcao strict mode! ' + nexted();
+}
+
+function nostrictMode() { return 'Eu sou strict'; }
+
