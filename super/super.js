@@ -16,5 +16,8 @@
 	usada apenas uma vez, e precisa ser usada antes que a palavra-chave this
 	possa ser usada. Essa palavra-chave também pode ser usada para chamar uma
 	função ou objeto pai.
+
+	Fonte MDN.
+	url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/super)
 */
 
