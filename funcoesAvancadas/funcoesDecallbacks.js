@@ -9,33 +9,61 @@
 */
 
 // exemplo 1
-function f1() {
-	setTimeout(function() {
-		console.log('f1');
-	}, 500);
+// function f1() {
+// 	setTimeout(function() {
+// 		console.log('f1');
+// 	}, 500);
+// }
+
+// function f2() {
+// 	setTimeout(function() {
+// 		console.log('f2');
+// 	}, 1000);
+// }
+
+// function f3() {
+// 	setTimeout(function() {
+// 		console.log('f3')
+// 	}, 800);
+// }
+
+// f1();
+// f2();
+// f3();
+// console.log('Teste...');
+// /*
+// 	Saida para function f1, f2, f3
+// 	Teste...
+// 	f1
+// 	f3
+// 	f2
+// */
+
+// exemplo 2
+function radon(min = 1000, max = 3000) {
+	let num = Math.random() * (min + max) - min;
+	return Math.floor(num); // retornar o menor inteiro
 }
 
-function f2() {
-	setTimeout(function() {
-		console.log('f2');
-	}, 1000);
+console.log(radon());
+
+function f1() {
+	setTimeout( function() {
+	console.log('f1');
+	}, radon());
 }
+f1();
+
+function f2(){
+	setTimeout( function() {
+		console.log('f2');
+	}, radon());
+}
+f2();
 
 function f3() {
-	setTimeout(function() {
-		console.log('f3')
-	}, 800);
+	setTimeout( function() {
+		console.log('f3');
+	}, radon());
 }
-
-f1();
-f2();
 f3();
-console.log('Teste...');
-/*
-	Saida para function f1, f2, f3
-	Teste...
-	f1
-	f3
-	f2
-*/
-
