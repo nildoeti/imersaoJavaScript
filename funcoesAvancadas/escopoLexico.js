@@ -1,3 +1,20 @@
+/*
+	Escopo
+
+	É o contexto atual de execução, em que valores e expressões são "visíveis"
+	ou podem ser referenciadas. Se uma variável ou outra expressão não estiver
+	"no escopo atual", então não está disponível para uso. Os escopos também
+	podem ser em camadas em uma hierarquia, de modo que os escopos filhos
+	tenham acesso aos escopos pais, mas não vice-versa.
+
+	Uma function serve como um procedimento em JavaScript, e portanto, cria um
+	escopo, de modo que (por exemplo) uma variável definida exclusivamente
+	dentro da função não pode ser acessada de fora da função ou dentro de
+	outras funções.
+
+	Fonte: MDN - url('https://developer.mozilla.org/pt-BR/docs/Glossary/Scope')
+*/
+
 const nome = 'Beltrano';
 
 /*
