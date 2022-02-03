@@ -17,3 +17,4 @@ function retornaFuncao() {
 }
 console.log(retornaFuncao()); // [Function (anonymous)]
 console.dir(retornaFuncao()); // [Function (anonymous)]
+
