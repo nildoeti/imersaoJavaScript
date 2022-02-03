@@ -16,13 +16,28 @@ const nome = 'Beltrano';
 
 
 // exemplo 2 para escopo da variável
+// function falaNome() {
+// 	console.log(nome);
+// }
+// console.log(nome); // Beltrano
+
+// function usarFalaNome() {
+// 	// body...
+// 	falaNome();
+// }
+
+// usarFalaNome(); // Beltrano
+
+
+// exemplo 3 para escopo da variável
 function falaNome() {
 	console.log(nome);
 }
-console.log(nome); // Beltrano
+
+falaNome(); // Beltrano
 
 function usarFalaNome() {
-	// body...
+	const nome = 'Fulano';
 	falaNome();
 }
 
