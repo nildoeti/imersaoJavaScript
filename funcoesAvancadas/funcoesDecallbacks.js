@@ -39,31 +39,69 @@
 // 	f2
 // */
 
-// exemplo 2
-function radon(min = 1000, max = 3000) {
-	let num = Math.random() * (min + max) - min;
-	return Math.floor(num); // retornar o menor inteiro
+// // exemplo 2
+// function radon(min = 1000, max = 3000) {
+// 	let num = Math.random() * (min + max) - min;
+// 	return Math.floor(num); // retornar o menor inteiro
+// }
+
+// console.log(radon());
+
+// function f1() {
+// 	setTimeout( function() {
+// 	console.log('f1');
+// 	}, radon());
+// }
+// f1();
+
+// function f2(){
+// 	setTimeout( function() {
+// 		console.log('f2');
+// 	}, radon());
+// }
+// f2();
+
+// function f3() {
+// 	setTimeout( function() {
+// 		console.log('f3');
+// 	}, radon());
+// }
+// f3();
+
+
+// exemplo 3
+function rand(min = 1000, max = 3000) {
+	const num = Math.random() * (min - max) - min;
+	return Math.floor(num); // retorna o menor inteiro
+}
+console.log(rand()) ;
+
+function f1(callback) { // recebe o parâmentro callback
+	setTimeout(() => {
+	  console.log('f1');
+	  if (callback) callback(); // checar se callback existe
+	}, rand());
 }
 
-console.log(radon());
-
-function f1() {
-	setTimeout( function() {
-	console.log('f1');
-	}, radon());
+function f2(callback) { // recebe o parâmentro callback
+	setTimeout( () => {
+		console.log('f2')
+	  	if (callback) callback(); // checar se callback existe
+	}, rand());
 }
-f1();
 
-function f2(){
-	setTimeout( function() {
-		console.log('f2');
-	}, radon());
+function f3(callback) {// recebe o parâmentro callback
+	setTimeout( () => {
+		console.log('f3')
+	  	if (callback) callback(); // checar se callback existe
+	}, rand());
 }
-f2();
 
-function f3() {
-	setTimeout( function() {
-		console.log('f3');
-	}, radon());
-}
-f3();
+// chamando as funções com callback
+f1( function() { // terminado a execução da função f1, a função f2 será executada
+	f2( function() { // terminado a execução da função f2, a função f3 será executada
+		f3( function() { // terminado a execução da função f3, executa console.log
+			console.log('Teste...');
+		});
+	});
+});
