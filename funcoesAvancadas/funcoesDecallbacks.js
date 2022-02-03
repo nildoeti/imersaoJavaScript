@@ -98,10 +98,28 @@ function f3(callback) {// recebe o parâmentro callback
 }
 
 // chamando as funções com callback
-f1( function() { // terminado a execução da função f1, a função f2 será executada
-	f2( function() { // terminado a execução da função f2, a função f3 será executada
-		f3( function() { // terminado a execução da função f3, executa console.log
-			console.log('Teste...');
-		});
-	});
-});
+// f1( function() { // terminado a execução da função f1, a função f2 será executada
+// 	f2( function() { // terminado a execução da função f2, a função f3 será executada
+// 		f3( function() { // terminado a execução da função f3, executa console.log
+// 			console.log('Teste...');
+// 		});
+// 	});
+// });
+
+
+
+// outra forma de chamar funções com callback
+
+f1(f1Callback);
+
+function f1Callback() {
+	f2(f2Callback);
+}
+
+function f2Callback() {
+	f3(f3Callback);
+}
+
+function f3Callback() {
+	console.log('Teste...');
+}
