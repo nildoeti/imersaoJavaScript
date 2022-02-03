@@ -6,9 +6,24 @@ const nome = 'Beltrano';
 	Isso se chama scopo lexico.
 */
 
-// exemplo para escopo da variável
+// exemplo 1 para escopo da variável
+// function falaNome() {
+// 	console.log(nome);
+// }
+
+// falaNome(); // 'Beltrano'
+
+
+
+// exemplo 2 para escopo da variável
 function falaNome() {
 	console.log(nome);
 }
+console.log(nome); // Beltrano
 
-falaNome(); // 'Beltrano'
+function usarFalaNome() {
+	// body...
+	falaNome();
+}
+
+usarFalaNome(); // Beltrano
