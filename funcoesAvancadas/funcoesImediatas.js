@@ -25,3 +25,11 @@ Fonte MDN - url(https://developer.mozilla.org/pt-BR/docs/Glossary/IIFE)
 
 // console.log(nome); // nome is not defined, pois não existe fora do escopo da
 					// função acima
+
+// exemplo 2 para IIFE
+
+let result = (function() { // result, retorna o valor da função, e não a função
+	let nome = 'Fulano';
+	return nome;
+})();
+console.log(result); // Fulano
