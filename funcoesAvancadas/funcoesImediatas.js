@@ -33,3 +33,11 @@ let result = (function() { // result, retorna o valor da função, e não a fun�
 	return nome;
 })();
 console.log(result); // Fulano
+
+// exemplo 3
+let x = (function() {
+	var varOne = 'One';
+	var varTwo = 'Two';
+	return varOne + ' ' + varTwo;
+})();
+console.log(x)
