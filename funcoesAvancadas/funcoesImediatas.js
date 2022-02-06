@@ -40,4 +40,5 @@ let x = (function() {
 	var varTwo = 'Two';
 	return varOne + ' ' + varTwo;
 })();
-console.log(x)
+console.log(x);
+console.log('...');
