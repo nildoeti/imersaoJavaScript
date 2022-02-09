@@ -8,8 +8,6 @@
     Fonte MDN: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 */
 
-
-// Funções mais curtas
 var elements = [
     'Hidrogen',
     'Helium',
@@ -17,8 +15,16 @@ var elements = [
     'Beryllum'
 ];
 
+// regular function
 const result = elements.map(function(element) {
-    return element;
-    // // esta setença retorna [ 'Hidrogen', 'Helium', 'Lithium', 'Beryllum' ]
+    return element.length;
+    // // esta setença retorna [ 8, 6, 7, 8 ]
 });
 console.log(result);
+
+// short function
+const result2 = elements.map((element) => {
+    return element.length;
+    // esta setença retorna [ 8, 6, 7, 8 ]
+});
+console.log(result2);
