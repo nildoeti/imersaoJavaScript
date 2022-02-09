@@ -8,3 +8,10 @@ hoisted(); // log foo
 function hoisted() {
     console.log('foo');
 };
+
+// Note que function expressions não são hoisted:
+noHosted(); // TypeError: noHosted is not a function
+
+var noHosted = function() {
+    console.log('bar');
+};
