@@ -12,3 +12,20 @@ var x = function(y) {
     return y * y;
 };
 console.log(x(4)); // 16
+
+/*
+    Expressão de função nomeada
+    Se você quer se referir à função atual dentro do corpo da função, você terá
+    que criar uma expressão de função nomeada. Este nome será local apenas para
+    o corpo (escopo) da função. Isto ainda evita o uso da propriedade
+    não-padronizada arguments.callee.
+*/
+var math = {
+    'factorial': function factorial(n) {
+        if (n <= 1)
+            return 1;
+        return n * factorial(n - 1);
+    }
+};
+
+console.log(math.factorial(4)); // 24
