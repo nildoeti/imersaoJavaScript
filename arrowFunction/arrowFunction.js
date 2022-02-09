@@ -28,3 +28,15 @@ const result2 = elements.map((element) => {
     // esta setença retorna [ 8, 6, 7, 8 ]
 });
 console.log(result2);
+
+// short function two
+const result3 = elements.map(element => {
+    return element.length;
+    // esta setença retorna [ 8, 6, 7, 8 ]
+});
+console.log(result3);
+
+// short function three
+const result4 = elements.map(element => element.length);
+// esta setença retorna [ 8, 6, 7, 8 ]
+console.log(result4);
