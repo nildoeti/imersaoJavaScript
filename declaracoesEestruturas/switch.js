@@ -23,3 +23,14 @@ switch (estadoSudeste) {
         console.log('opção não identificada');
 
 }
+
+// script acima com uso de if/else
+if (estadoSudeste === 'MG') {
+    console.log('Minas Gerais');
+} else if (estadoSudeste === 'R') {
+    console.log('Rio de Janeiro');
+} else if (estadoSudeste === 'SP') {
+    console.log('São Paulo');
+} else {
+    console.log('opção não identificada');
+}
