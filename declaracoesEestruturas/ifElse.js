@@ -6,14 +6,27 @@
  // exemplo de uso do if/else
 let idade = 18;
 
-if (idade <= 11) {
+// if (idade <= 11) {
+//     console.log('Você é menor de idade');
+// } else if (idade > 11 && idade <= 14) {
+//     console.log('Você é pré-adolecente');
+// } else if (idade > 14 && idade < 21) {
+//     console.log('Você é adolecente');
+// } else if (idade > 21 && idade < 60) {
+//     console.log('Você é adulto');
+// } else {
+//     console.log('Você é idoso');
+// }
+
+// exemplo if/else compacto
+if (idade <= 11)
     console.log('Você é menor de idade');
-} else if (idade > 11 && idade <= 14) {
-    console.log('Você é pré-adolecente');
-} else if (idade > 14 && idade < 21) {
+else if (idade > 11 && idade <= 14)
+    console.log('Você é pré adolecente');
+else if (idade > 14 && idade < 21)
     console.log('Você é adolecente');
-} else if (idade > 21 && idade < 60) {
+else if (idade > 21 && idade <= 60)
     console.log('Você é adulto');
-} else {
+else
     console.log('Você é idoso');
-}
+    
