@@ -18,14 +18,28 @@
 // Criar uma solução para que a vírgula ao final do ultímo digito, não apareça
 
 // exemplo 1 do desafio
+// let msg = '';
+//
+// for (let i = 0; i < 10; i++) {
+//     if (i == 9) {
+//         msg += i;
+//     };
+//     msg += i + ', ';
+// };
+
+// resultado não esperado
+// console.log(msg); // 0, 1, 2, 3, 4, 5, 6, 7, 8, 99,
+
+// Desafio
+// Continuação para o desafio acima
 let msg = '';
 
 for (let i = 0; i < 10; i++) {
     if (i == 9) {
         msg += i;
+        break;
     };
     msg += i + ', ';
-};
+}
 
-// resultado não esperado
-console.log(msg); // 0, 1, 2, 3, 4, 5, 6, 7, 8, 99,
+console.log(msg); // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
