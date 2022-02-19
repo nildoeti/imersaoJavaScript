@@ -48,16 +48,33 @@
 
 // Desafio 3
 // Continuação do exemplo acima, porém retorna os números pares
+// let msg = '';
+
+// for (let i = 0; i <= 20; i++) {
+//     if (i % 2 === 0) {
+//         if (i == 20) {
+//             msg += i;
+//             break;
+//         };
+//         msg += i + ', ';
+//     };
+// }
+
+// console.log(msg);
+
+// Desafio 4
+// Continuação do desafio acima, porém com solução negando os números pares
 let msg = '';
 
 for (let i = 0; i <= 20; i++) {
-    if (i % 2 === 0) {
-        if (i == 20) {
-            msg += i;
-            break;
-        };
-        msg += i + ', ';
-    };
+    if (i == 20) {
+        msg += i;
+        break;
+    } else if (i %2 != 0) {
+        msg += '';
+        continue;
+    }
+    msg += i + ', ';
 }
 
 console.log(msg);
