@@ -59,3 +59,5 @@ console.log(person3.age); // 26
 console.log(person3.first); // Karen
 console.log(person1.constructor.name); // retorna o nome do constructor
 
+
+// Modificando Protótipos
