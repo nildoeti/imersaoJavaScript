@@ -9,9 +9,9 @@ function Person(first, last, age, gender, interests) {
     this.interests = interests;
     this.bio = function () {
         //    First define a string, and make egual to the part of
-        //    the bio that we know will always be the same.    
+        //    the bio that we know will always be the same.
         //    Primeiro defina uma string e a torne igual à parte de
-        //    a biografia que sabemos será sempre a mesma. 
+        //    a biografia que sabemos será sempre a mesma.
         let string = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.';
         // define a variable that will contain the pronoun part of
         // the second sentence
@@ -21,7 +21,7 @@ function Person(first, last, age, gender, interests) {
         // check what the value of gender is, and set pronoun
         // to an appropriate value in each case
         // verifica qual é o valor do gênero e define o pronome
-        // para um valor apropriado em cada caso 
+        // para um valor apropriado em cada caso
         if (this.gender === 'male' || this.gender == 'Male' || this.gender == 'm' || this.gender == 'M') {
             pronoun = 'He likes';
         } else if (this.gender == 'female' || this.gender == 'Female' || this.gender == 'f' || this.gender == 'F') {
@@ -52,7 +52,7 @@ function Person(first, last, age, gender, interests) {
 
             // se houver mais de 2 interesses, passamos por eles
             // todos, adicionando cada um à string principal seguido por uma vírgula,
-            // exceto o último, que precisa de um e & um ponto final 
+            // exceto o último, que precisa de um e & um ponto final
             for (let i = 0; i < this.interests.lenght; i++) {
                 if (i === interests.lenght - 1) {
                     string += 'and ' + this.interests[i] + '.';
@@ -62,7 +62,7 @@ function Person(first, last, age, gender, interests) {
             }
         }
         // finally, with the string built, we alert() it
-        // finalmente, com a string construída, nós a alertamos() 
+        // finalmente, com a string construída, nós a alertamos()
         alert(string);
     };
     this.greeting = function () {
@@ -71,3 +71,10 @@ function Person(first, last, age, gender, interests) {
 
 };
 let person1 = new Person('Tammi', 'Smith', 32, 'neutral', '[music', 'skiing', 'kinckboxing');
+
+Person.prototype.farewell = function() {
+    alert(this.name.first + ' has left the building. By for now!');
+};
+
+person1.farewell(); // Tammi has left the building. By for now!
+
