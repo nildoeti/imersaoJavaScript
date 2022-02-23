@@ -28,3 +28,13 @@ var novoArr = arr.filter(function(elemento, i, arr){
 console.log(novoArr);
 
 
+// Exemplo: Filtrando todos os valores pequenos
+// Fonte MDN: url(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter)
+function isBigEnough(value) {
+	return value > 20;
+}
+
+var filtered = [12, 23, 45, 0, 7, 55].filter(isBigEnough); //
+console.log(filtered); // [ 23, 45, 55 ]
+
+
