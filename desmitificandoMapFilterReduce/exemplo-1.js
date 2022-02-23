@@ -67,5 +67,22 @@ function filterById (obj) {
 var arrById = arr2.filter(filterById);
 
 // Number of Invalid Entries =  [ { id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 } ]
-console.log('Number of Invalid Entries = ', arrById); 
+console.log('Number of Invalid Entries = ', arrById);
 
+
+
+// Procurando em um array
+// O exemplo a seguir usa filter() para filtrar o conteúdo de um array baseado em um critério de busca
+var fruits = ['aplle', 'banana', 'grapes', 'mango', 'orange'];
+/**
+ * Array filters items based on search  criteria (query)
+ * */
+ function filterItems(query) {
+ 	return fruits.filter( function(el) {
+ 		return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+ 	});
+ }
+
+ console.log(filterItems('ap')); //[ 'aplle', 'grapes' ]
+ console.log(filterItems('an')); // [ 'banana', 'mango', 'orange' ]
+ 
