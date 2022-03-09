@@ -62,3 +62,6 @@ console.log(namePets); // [ 'rex', 'bolinha', 'gup', 'pé de pano' ]
 let typePets = pets.map( (pet) => {return pet.type});
 console.log(typePets); // [ 'dog', 'cat', 'fish', 'horse' ]
 
+// exemplo de uso do map para filtrar somente a idade dos pets
+let idadePets = pets.map( (pet) => { return pet.age});
+console.log(idadePets); // [ 10, 2, 1, 1 ]
