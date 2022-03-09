@@ -12,3 +12,44 @@
 */
 
 
+const pets = [ // um array com uma lista de objetos 
+{
+    name: 'rex',
+    type: 'dog',
+    age: 10,
+    weight: 0.22
+},
+{
+    name: 'bolinha',
+    type: 'cat',
+    age: 2,
+    weight: 1
+},
+{
+    name: 'gup',
+    type: 'fish',
+    age: 1,
+    weight: 0.01
+},
+{
+    type: 'horse',
+    name: 'pé de pano',
+    age: 1,
+    weight: 0.01
+}
+];
+
+// confirmando se tudo esta ok
+console.log(pets);
+
+/*
+    Saida para pets
+    [
+      { name: 'rex', type: 'dog', age: 10, weight: 0.22 },
+      { name: 'bolinha', type: 'cat', age: 2, weight: 1 },
+      { name: 'gup', type: 'fish', age: 1, weight: 0.01 },
+      { type: 'horse', name: 'pé de pano', age: 1, weight: 0.01 }
+    ]
+
+*/
+
