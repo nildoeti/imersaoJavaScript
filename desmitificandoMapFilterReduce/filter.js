@@ -42,3 +42,16 @@ console.log(pets);
         { name: 'gup', type: 'fish', age: 1 }
     ]
  */
+
+
+// filtrar objetos com age < 5 anos
+let petOne = pets.filter( (pet) => { return pet.age < 5});
+console.log(petOne);
+/*
+    Saida paa newPetsOne
+    [
+    { name: 'bolinha', type: 'cat', age: 2 },
+    { name: 'gup', type: 'fish', age: 1 }
+    ]
+*/
+
