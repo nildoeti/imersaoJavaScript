@@ -53,3 +53,8 @@ console.log(pets);
 
 */
 
+
+// exemplo de uso do map para filtrar somente os nomes dos pets
+let namePets = pets.map( (pet) => { return pet.name});
+console.log(namePets); // [ 'rex', 'bolinha', 'gup', 'pé de pano' ]
+
