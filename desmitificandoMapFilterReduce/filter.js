@@ -55,3 +55,12 @@ console.log(petOne);
     ]
 */
 
+// filtrando objetos com age > 5
+let petTwo = pets.filter( (pet) => {return pet.age > 5});
+console.log(petTwo);
+
+/*
+    Saida para petTwo
+    [ { name: 'rex', type: 'dog', age: 10 } ]
+*/
+
