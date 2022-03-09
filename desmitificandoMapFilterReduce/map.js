@@ -58,3 +58,7 @@ console.log(pets);
 let namePets = pets.map( (pet) => { return pet.name});
 console.log(namePets); // [ 'rex', 'bolinha', 'gup', 'pé de pano' ]
 
+// exemplo de uso do map para filtrar somente o tipo dos pets
+let typePets = pets.map( (pet) => {return pet.type});
+console.log(typePets); // [ 'dog', 'cat', 'fish', 'horse' ]
+
