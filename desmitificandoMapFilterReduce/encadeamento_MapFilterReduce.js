@@ -40,19 +40,29 @@ const pets = [ // um array com uma lista de objetos
 
 
 // total para dogs
-let dog = pets.filter( (pet) => {
+// let dog = pets.filter( (pet) => {
+//     return pet.type === 'dog';
+// });
+
+// console.log(dog); 
+// /*
+//     Saida para dog
+//     { name: 'rex', type: 'dog', age: 10, weight: 0.22},
+//     { name: 'Tatus', type: 'dog', age: 4, weight: 1.5 }
+// */ 
+
+// let totalWightDogs = pets.reduce( (total, dog) => {
+//     return total + dog.weight;
+// }, 0);
+
+// console.log('Total da alturas dos dogs: ', totalWightDogs); // Total da alturas dos dogs:  2.7399999999999993
+
+
+// filter e reduce encadeados
+let totalWeightDogs = pets.filter( (pet) => {
     return pet.type === 'dog';
-});
-
-console.log(dog); 
-/*
-    Saida para dog
-    { name: 'rex', type: 'dog', age: 10, weight: 0.22},
-    { name: 'Tatus', type: 'dog', age: 4, weight: 1.5 }
-*/ 
-
-let totalWightDogs = pets.reduce( (total, dog) => {
-    return total + dog.weight;
+}).reduce( (total, pet) => {
+    return total + pet.weight;
 }, 0);
 
-console.log('Total da alturas dos dogs: ', totalWightDogs); // Total da alturas dos dogs:  2.7399999999999993
+console.log(totalWeightDogs); // 1.72
