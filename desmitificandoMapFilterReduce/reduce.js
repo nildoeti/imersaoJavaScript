@@ -42,4 +42,4 @@ let totalWeight = pets.reduce( (total, pet) => {
     console.log('Total: ', total, pet.name);
 
     return total + pet.weight;
-}, 0);
+}, 0); // valor inicial igual a zero
