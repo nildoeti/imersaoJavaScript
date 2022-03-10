@@ -39,7 +39,12 @@ const pets = [ // um array com uma lista de objetos
 
 // exemplo e uso para reduce com um array de objetos para pets
 let totalWeight = pets.reduce( (total, pet) => {
-    console.log('Total: ', total, pet.name);
+    // console.log('Total: ', total, pet.name);
+
+    // retorna valor total dos pts diferentes de dog
+    if (pet.type !== 'dog') { return total}
 
     return total + pet.weight;
 }, 0); // valor inicial igual a zero
+
+console.log(totalWeight); // 0.22
