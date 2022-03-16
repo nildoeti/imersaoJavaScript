@@ -1,10 +1,18 @@
-const fs = require('fs')
-const path = require('path')
-const basePath = '../assets/'
+/*
+    Require
+    É a maneira mais fácil de incluir módulos que existem em arquivos separados. 
+    A funcionalidade básica do require é que ele lê um arquivo JavaScript, 
+    executa o arquivo e, em seguida, retorna o objeto de exportação. Um módulo 
+    de exemplo: 
 
-console.log('Begin');
+    Fonte: NODEJS url(https://nodejs.org/en/knowledge/getting-started/what-is-require/)
+*/
 
+const fs = require('fs');
+const path = require('path');
+const basePath = './assets/'
+
+// exemplo 1 para promises
 const content = fs.readFileSync(path.resolve(basePath, 'poema1.txt'));
-console.log(content.toString());
 
-console.log('End');
+console.log(content.toString());
