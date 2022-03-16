@@ -13,6 +13,14 @@ const path = require('path');
 const basePath = './assets/'
 
 // exemplo 1 para promises
-const content = fs.readFileSync(path.resolve(basePath, 'poema1.txt'));
+// const content = fs.readFileSync(path.resolve(basePath, 'poema1.txt'));
 
-console.log(content.toString());
+// console.log(content.toString());
+
+const files = fs.readdirSync(path.resolve(basePath));
+const sentences = files.filter((file) => /s[1-4].txt/gi.test(file));
+
+for (const sentence of   sentences) {
+    const text = fs.readFileSync(path.resolve(basePath, sentence)).toString();
+    console.log(text);
+}
