@@ -15,10 +15,33 @@
 // }
 
 // exemplo 2
-function recurse() {
-    if (condition) {
+// function recurse() {
+//     if (condition) {
+//
+//     } else {
+//         recurse();
+//     }
+// }
 
-    } else {
-        recurse();
+function countDown(fromNumber) {
+    console.log(fromNumber);
+
+    let nextNumber = fromNumber -1;
+    if (nextNumber > 0) {
+        // chamando a função
+        countDown(nextNumber);
     }
+
 }
+
+countDown(3);
+
+function recursiva(max) {
+    console.log(max);
+
+    if(max > 0) return;
+    max++;
+    recursiva(3)
+}
+
+recursiva(3);
