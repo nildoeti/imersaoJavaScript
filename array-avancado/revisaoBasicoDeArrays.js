@@ -53,4 +53,15 @@ console.log(novoNum);  // [ 1, 2 ]
 
 // verificando o tamanho de um array
 const frutas = ['maça', 'abacaxi', 'mamão'];
-console.log(frutas.length); // 
+console.log(frutas.length); // 3
+
+// removendo o ultimo elemento de um array
+const removido = frutas.pop();
+console.log(frutas ,removido); // [ 'maça', 'abacaxi' ] mamão
+
+
+// removendo um elemento de um array no começo
+const cores = ['azul', 'amarelo', 'cinza', 'preto'];
+const comeco = cores.shift();
+
+console.log(cores, comeco);
