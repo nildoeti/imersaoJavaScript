@@ -88,3 +88,8 @@ const comStringArray = 'Convertendo uma string em uma array';
 const stringArray = comStringArray.split(' ');
 console.log(stringArray); // [ 'Convertendo', 'uma', 'string', 'em', 'uma', 'array' ]
 
+// converter array em strings
+const objetos = ['chinelos', 'lapis', 'mesa', 'pedra'];
+const arrayString = objetos.join(' ');
+console.log(arrayString); // chinelos lapis mesa pedra
+
