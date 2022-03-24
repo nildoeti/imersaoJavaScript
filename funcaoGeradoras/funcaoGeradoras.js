@@ -100,3 +100,17 @@ const bar = foo();
 
 console.log(bar.next()); // { value: 10, done: false }
 console.log(bar.next()); // { value: 20, done: false }
+
+
+// acessando os valores de uma função geradora com o laço for
+function* numeros() {
+    yield 0;
+    yield 1;
+    yield 2;
+}
+
+const fnNum = numeros();
+for (let valor of fnNum) {
+    console.log(valor); // 0 1 2
+}
+
