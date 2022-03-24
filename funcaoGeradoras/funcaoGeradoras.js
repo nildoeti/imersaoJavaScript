@@ -114,3 +114,21 @@ for (let valor of fnNum) {
     console.log(valor); // 0 1 2
 }
 
+// delegando valores de uma função geradora para outra função geradora
+function* geradora1() {
+    yield 100;
+    yield 101;
+    yield 102;
+}
+
+function* geradora2() {
+    yield* geradora1();
+    yield 103;
+    yield 104;
+    yield 105;
+}
+
+const g3 = geradora2();
+for (let valor of g3) {
+    console.log(valor); // 100 101 102 103 104 105
+}
