@@ -89,3 +89,14 @@ let genYield = yieldAndReturn();
 console.log(genYield.next()); // { value: 'Y', done: false }
 console.log(genYield.next()); // { value: 'R', done: false }
 console.log(genYield.next()); // { value: 'unreachable', done: false }
+
+// Gerador definido em uma expressão
+const foo = function* () {
+    yield 10;
+    yield 20;
+};
+
+const bar = foo();
+
+console.log(bar.next()); // { value: 10, done: false }
+console.log(bar.next()); // { value: 20, done: false }
