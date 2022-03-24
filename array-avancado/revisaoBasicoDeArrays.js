@@ -81,3 +81,10 @@ console.log(fatiamento1); // [ 'amarelo', 'cinza' ]
 
 const fatiamento2 = cores.slice(1, -1);
 console.log(fatiamento2); // [ 'amarelo', 'cinza', 'preto' ]
+
+
+// converter uma string em uma array
+const comStringArray = 'Convertendo uma string em uma array';
+const stringArray = comStringArray.split(' ');
+console.log(stringArray); // [ 'Convertendo', 'uma', 'string', 'em', 'uma', 'array' ]
+
