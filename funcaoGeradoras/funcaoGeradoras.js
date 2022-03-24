@@ -8,14 +8,14 @@
 */
 
 // exemplo de função geradora
-function* funcaoGeradora(i) {
+function* fnGeradora(i) {
     yield i;
     yield i + 10;
-    yield i + 20;
+    yield i = 20;
 }
 
-let gen = funcaoGeradora(10);
+let fnGen = fnGeradora(10);
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+console.log(fnGen.next().value);
+console.log(fnGen.next().value);
+console.log(fnGen.next().value);
