@@ -64,4 +64,20 @@ console.log(frutas ,removido); // [ 'maça', 'abacaxi' ] mamão
 const cores = ['azul', 'amarelo', 'cinza', 'preto'];
 const comeco = cores.shift();
 
-console.log(cores, comeco);
+console.log(cores, comeco); // [ 'amarelo', 'cinza', 'preto' ] azul
+
+
+// adicionado um elemento no final da array
+cores.push('vermelho');
+console.log(cores); // [ 'amarelo', 'cinza', 'preto', 'vermelho' ]
+
+// adicionado um elemento no inicio da array
+cores.unshift('branco');
+console.log(cores); // [ 'branco', 'amarelo', 'cinza', 'preto', 'vermelho' ]
+
+// fatiando um array
+const fatiamento1 = cores.slice(1, 3);
+console.log(fatiamento1); // [ 'amarelo', 'cinza' ]
+
+const fatiamento2 = cores.slice(1, -1);
+console.log(fatiamento2); // [ 'amarelo', 'cinza', 'preto' ]
