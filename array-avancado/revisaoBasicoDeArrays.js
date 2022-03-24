@@ -44,3 +44,13 @@ console.log(sum(...num)); // 6
 console.log(sum.apply(null, num)); // 6
 
 
+const novoNum = [...num];
+console.log(novoNum); // [ 1, 2, 3 ]
+
+novoNum.pop();
+console.log(novoNum);  // [ 1, 2 ]
+
+
+// verificando o tamanho de um array
+const frutas = ['maça', 'abacaxi', 'mamão'];
+console.log(frutas.length); // 
