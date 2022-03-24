@@ -77,3 +77,15 @@ logGe.next('pretzel'); // 1 pretzel
 logGe.next('california'); // 2 california
 logGe.next('mayonnaise'); // 3 mayonnaise
 
+// Declaração de retono em um gerador
+function* yieldAndReturn() {
+    yield 'Y';
+    yield 'R';
+    yield 'unreachable';
+}
+
+let genYield = yieldAndReturn();
+
+console.log(genYield.next()); // { value: 'Y', done: false }
+console.log(genYield.next()); // { value: 'R', done: false }
+console.log(genYield.next()); // { value: 'unreachable', done: false }
