@@ -36,3 +36,25 @@ console.log(fnGen2.next().value); // 0
 console.log(fnGen2.next().value); // 1
 console.log(fnGen2.next().value); // 2
 console.log(fnGen2.next().value); // 3
+
+// exemplo 3 com yield
+function* outroGerador(i) {
+    yield i + 1;
+    yield i + 2;
+    yield i + 3;
+}
+
+function* geradora(i) {
+    yield i;
+    yield i + outroGerador(i);
+    yield i + 10;
+}
+
+
+let gen = geradora(10);
+
+console.log(gen.next().values); // 10
+console.log(gen.next().values); // 11
+console.log(gen.next().values); // 12
+console.log(gen.next().values); // 13
+console.log(gen.next().values); // 20
