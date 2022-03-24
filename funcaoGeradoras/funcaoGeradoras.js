@@ -58,3 +58,22 @@ console.log(gen.next().values); // 11
 console.log(gen.next().values); // 12
 console.log(gen.next().values); // 13
 console.log(gen.next().values); // 20
+
+
+// Passando argumentos em geradores
+function* logGerator(i) {
+    console.log(0);
+    console.log(1, yield);
+    console.log(2, yield);
+    console.log(3, yield);
+}
+
+let logGe = logGerator();
+
+// a primeira chamada next é executada desde o início da função
+// até a primeira declaração yield
+logGe.next(); // 0
+logGe.next('pretzel'); // 1 pretzel
+logGe.next('california'); // 2 california
+logGe.next('mayonnaise'); // 3 mayonnaise
+
