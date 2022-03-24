@@ -132,3 +132,27 @@ const g3 = geradora2();
 for (let valor of g3) {
     console.log(valor); // 100 101 102 103 104 105
 }
+
+// função geradora que retorna funções
+function* geradora3() {
+
+    yield function () {
+        console.log('vindo da função geradora 3');
+    }
+
+    // ...
+    // pode trabalhar várias funções
+    // ...
+
+    yield function () {
+        console.log('vindo da função geradora 3');
+    }
+
+}
+
+const g4 = geradora3();
+const func1 = g4.next().value;
+const func2 = g4.next().value;
+
+func1(); // vindo da função geradora 3
+func2(); // vindo da função geradora 3
