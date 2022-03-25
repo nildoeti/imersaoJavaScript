@@ -59,6 +59,19 @@ console.log('Lista atual: ', nomes); // Lista atual:  [ 'Maria', 'João', 'Eduad
 
 
 // simulando shift
-const removidos = nomes.splice(0, 2, 'Beltrano', 'Ciclano'); // remove dois elementos a partir do índice 0 e adiciona outros dois
-console.log(nomes, removidos); // [ 'Beltrano', 'Ciclano', 'Eduador', 'Gabriel', 'Julia' ] [ 'Maria', 'João' ]
+// const removidos = nomes.splice(0, 2, 'Beltrano', 'Ciclano'); // remove dois elementos a partir do índice 0 e adiciona outros dois
+// console.log(nomes, removidos); // [ 'Beltrano', 'Ciclano', 'Eduador', 'Gabriel', 'Julia' ] [ 'Maria', 'João' ]
 
+// simulação de push
+// const removidos = nomes.splice(-1, 1, 'Ciclano'); // remove 1 elemnto no final do array e adiciona 'Ciclano' no lugar
+// console.log(nomes, removidos); // [ 'Maria', 'João', 'Eduador', 'Gabriel', 'Ciclano' ] [ 'Julia' ]
+
+
+// simulação de push
+// const removidos = nomes.splice(-1, 0, 'Ciclano'); // adiciona 'Ciclano' ao final do array sem remover nenhum elemento
+// console.log(nomes, removidos); // [ 'Maria', 'João', 'Eduador', 'Gabriel', 'Ciclano', 'Julia' ] []
+
+
+// simulação de push
+const removidos = nomes.splice(nomes.lenght, 0, 'Fulano'); // adiciona 'Fulano' ao final do array sem remover nenhum elemento
+console.log(nomes, removidos); // [ 'Fulano', 'Maria', 'João', 'Eduador', 'Gabriel', 'Julia' ] []
