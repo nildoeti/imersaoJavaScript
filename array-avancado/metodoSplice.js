@@ -49,6 +49,16 @@ console.log('Lista atual: ', nomes); // Lista atual:  [ 'Maria', 'João', 'Eduad
 // console.log(nomes, removidos); // [ 'Maria', 'João', 'Eduador', 'Beltrano' ] [ 'Gabriel', 'Julia' ]
 
 
-const removidos = nomes.splice(1, 2, 'Ciclano', 'Beltrano'); // remove 2 elementos a partir da posição 1 e adiciona outros dois
-console.log(nomes, removidos); // [ 'Maria', 'Ciclano', 'Beltrano', 'Gabriel', 'Julia' ] [ 'João', 'Eduador' ]
+// const removidos = nomes.splice(1, 2, 'Ciclano', 'Beltrano'); // remove 2 elementos a partir da posição 1 e adiciona outros dois
+// console.log(nomes, removidos); // [ 'Maria', 'Ciclano', 'Beltrano', 'Gabriel', 'Julia' ] [ 'João', 'Eduador' ]
+
+
+// simulando shift
+// const removidos = nomes.splice(0, 1); // a partir do índice 0, remove um elemento
+// console.log(nomes, removidos); // [ 'João', 'Eduador', 'Gabriel', 'Julia' ] [ 'Maria' ]
+
+
+// simulando shift
+const removidos = nomes.splice(0, 2, 'Beltrano', 'Ciclano'); // remove dois elementos a partir do índice 0 e adiciona outros dois
+console.log(nomes, removidos); // [ 'Beltrano', 'Ciclano', 'Eduador', 'Gabriel', 'Julia' ] [ 'Maria', 'João' ]
 
