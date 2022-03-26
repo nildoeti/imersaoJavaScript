@@ -12,39 +12,57 @@
 
 
 // exemplo 1
-function print(callback) {
-	callback();	// A função print( ) recebe outra função como parâmetro e a chama dentro dela. 
-				//  isso se chama retorno do chamado (callback)
+// function print(callback) {
+// 	callback();	// A função print( ) recebe outra função como parâmetro e a chama dentro dela. 
+// 				//  isso se chama retorno do chamado (callback)
+// }
+
+// function tarefaUm() {
+// 	// body...
+// 	console.log('Esta mensagem aparecerá depois de 1 milisegundos');
+// }
+
+// function tarefaDois() {
+// 	console.log('Esta mensagem aparecerá depois de 2 milisegundos');
+// }
+
+// setTimeout(tarefaUm, 2000); 
+// setTimeout(tarefaDois, 1000)
+
+
+// // exemplo 2
+// function message() {
+// 	console.log('Esta mensagem aparecerá depois de 5 milisegundos');
+// }
+
+// setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
+
+// // exemplo 3 com uso de função anônima
+// setTimeout(function() {
+// 	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
+// }, 3000);
+
+
+// // exemplo 4 com Arrow functions
+// setTimeout( () => {
+// 	console.log('Esta mensagem aparecerá depois de 4 milisegundos');
+// }, 500);
+
+
+/*
+	mais sobre callback
+	Fonte betrybe - url(https://blog.betrybe.com/tecnologia/callback/)
+*/
+
+function primeiroBloco() {
+	setTimeout( function() {
+		console.log('Esse é o primeiro bloco de comandos após 5 segundos');
+	}, 5000);
 }
 
-function tarefaUm() {
-	// body...
-	console.log('Esta mensagem aparecerá depois de 1 milisegundos');
+function segudoBloco() {
+	console.log('Esse é o segundo bloco de comandos');
 }
 
-function tarefaDois() {
-	console.log('Esta mensagem aparecerá depois de 2 milisegundos');
-}
-
-setTimeout(tarefaUm, 2000); 
-setTimeout(tarefaDois, 1000)
-
-
-// exemplo 2
-function message() {
-	console.log('Esta mensagem aparecerá depois de 5 milisegundos');
-}
-
-setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
-
-// exemplo 3 com uso de função anônima
-setTimeout(function() {
-	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
-}, 3000);
-
-
-// exemplo 4 com Arrow functions
-setTimeout( () => {
-	console.log('Esta mensagem aparecerá depois de 4 milisegundos');
-}, 500);
-
+primeiroBloco(); // este bloco é executado depois do segundo bloco
+segudoBloco(); // este bloco é executado antes do primeiro bloco
