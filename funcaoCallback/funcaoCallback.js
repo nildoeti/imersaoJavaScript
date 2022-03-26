@@ -19,11 +19,11 @@ function print(callback) {
 
 function tarefaUm() {
 	// body...
-	console.log('tarefa 1');
+	console.log('Esta mensagem aparecerá depois de 1 milisegundos');
 }
 
 function tarefaDois() {
-	console.log('Tarefa 2');
+	console.log('Esta mensagem aparecerá depois de 2 milisegundos');
 }
 
 setTimeout(tarefaUm, 2000); 
@@ -31,15 +31,20 @@ setTimeout(tarefaDois, 1000)
 
 
 // exemplo 2
-// function message() {
-// 	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
-// }
+function message() {
+	console.log('Esta mensagem aparecerá depois de 5 milisegundos');
+}
 
-// setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
+setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
 
 // exemplo 3 com uso de função anônima
 setTimeout(function() {
 	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
 }, 3000);
 
+
+// exemplo 4 com Arrow functions
+setTimeout( () => {
+	console.log('Esta mensagem aparecerá depois de 4 milisegundos');
+}, 500);
 
