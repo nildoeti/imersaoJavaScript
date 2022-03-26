@@ -54,15 +54,27 @@
 	Fonte betrybe - url(https://blog.betrybe.com/tecnologia/callback/)
 */
 
-function primeiroBloco() {
-	setTimeout( function() {
-		console.log('Esse é o primeiro bloco de comandos após 5 segundos');
-	}, 5000);
+// function primeiroBloco() {
+// 	setTimeout( function() {
+// 		console.log('Esse é o primeiro bloco de comandos após 5 segundos');
+// 	}, 5000);
+// }
+
+// function segudoBloco() {
+// 	console.log('Esse é o segundo bloco de comandos');
+// }
+
+// primeiroBloco(); // este bloco é executado depois do segundo bloco
+// segudoBloco(); // este bloco é executado antes do primeiro bloco
+
+
+// mais exemplo de função calllbackr
+function exibeMensagensNaOrdem(mensagem, callback) {
+	console.log(mensagem);
+	callback();
 }
 
-function segudoBloco() {
-	console.log('Esse é o segundo bloco de comandos');
-}
+exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function() { // retorno mensagem
+	console.log('Essa é a segunda mensagem exibida na ordem'); // retorno do callback
+});
 
-primeiroBloco(); // este bloco é executado depois do segundo bloco
-segudoBloco(); // este bloco é executado antes do primeiro bloco
