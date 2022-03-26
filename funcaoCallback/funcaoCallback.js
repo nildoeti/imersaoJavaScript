@@ -31,10 +31,15 @@ setTimeout(tarefaDois, 1000)
 
 
 // exemplo 2
-function message() {
-	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
-}
+// function message() {
+// 	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
+// }
 
-setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
+// setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
+
+// exemplo 3 com uso de função anônima
+setTimeout(function() {
+	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
+}, 3000);
 
 
