@@ -29,3 +29,12 @@ function tarefaDois() {
 setTimeout(tarefaUm, 2000); 
 setTimeout(tarefaDois, 1000)
 
+
+// exemplo 2
+function message() {
+	console.log('Esta mensagem aparecerá depois de 3 milisegundos');
+}
+
+setTimeout(message); // Esta mensagem aparecerá depois de 3 milisegundos
+
+
