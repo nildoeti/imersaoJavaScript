@@ -69,12 +69,23 @@
 
 
 // mais exemplo de função calllbackr
-function exibeMensagensNaOrdem(mensagem, callback) {
+// function exibeMensagensNaOrdem(mensagem, callback) {
+// 	console.log(mensagem);
+// 	callback();
+// }
+
+// exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function() { // retorno mensagem
+// 	console.log('Essa é a segunda mensagem exibida na ordem'); // retorno do callback
+// });
+
+
+// representação da função aexibeMensagensNaOrdem() reescrita de forma diferebte
+function exibePrimeiraMensagem(mensagem, callback) {
 	console.log(mensagem);
 	callback();
 }
 
-exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function() { // retorno mensagem
-	console.log('Essa é a segunda mensagem exibida na ordem'); // retorno do callback
-});
-
+function exibeSegundaMensagem() {
+	console.log('Essa é a segunda mensagem do novo exemplo');
+}
+exibePrimeiraMensagem('Essa é a primeira mensagem do novo exemplo', exibeSegundaMensagem);
