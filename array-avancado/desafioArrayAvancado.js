@@ -1,7 +1,7 @@
 /*
     Desafio
     Retorna todos os objetos do array
-    Retorne as pessoas que tem o nome com 7 letras ou mais
+    Retorne as pessoas que tem o nome com 8 letras ou mais
     Retorne as pessoas com mais de 50 anos
     Retorne as pessoas cujo nome termina com a letra e
 */
@@ -15,9 +15,16 @@ const pessoas = [
     {nome: 'Citrano', idade: 47}
 ];
 
-// Retorna todos os objetos do array
-const nomesGrandes = pessoas.filter( (obj) => {return obj.nome.length >= 8} );
-console.log(nomesGrandes);
+// Retorne as pessoas com mais de 50 anos
+const pessoasIdade = pessoas.filter( obj => obj.idade >= 50);
+console.log(pessoasIdade); // [ { nome: 'Fulano', idade: 62 }, { nome: 'Ciclano', idade: 55 } ]
+
+
+
+// Retorna todos os objetos do array com nomes maior ou igual a 8 caracteres
+// const nomesGrandes = pessoas.filter( (obj) => {return obj.nome.length >= 8} );
+// console.log(nomesGrandes); // [ { nome: 'Beltrano', idade: 23 } ]
+
 
 
 
