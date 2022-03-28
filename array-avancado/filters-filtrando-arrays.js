@@ -2,6 +2,9 @@
     Filter: Filtra arrays
     Map: Modifica arrays
     Reduce: Reduz arrrays
+
+
+    Filter sempre irá retornar a mesma quantidade de array ou menos.
 */
 
 // retornando números maior que 10
