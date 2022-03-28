@@ -7,15 +7,22 @@
 // retornando números maior que 10
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
-// exemplo 2
-function callbackFilter(valor, indice, array) { // indce e array não sendo usados na função
-    return valor > 10; // exemplo mais adequado para este projetop
+// exemplo 3
+function callbackFilters(valor) { // declarando somente parâmetros que for usar
+    return valor > 10;
 }
-const numerosFiltrados = numeros.filter(callbackFilter);
+
+const numerosFiltrados = numeros.filter(callbackFilters);
 console.log(numerosFiltrados);
 
 
 
+// exemplo 2
+// function callbackFilter(valor, indice, array) { // indce e array não sendo usados na função
+//     return valor > 10; // exemplo mais adequado para este projetop
+// }
+// const numerosFiltrados = numeros.filter(callbackFilter);
+// console.log(numerosFiltrados);
 
 
 
