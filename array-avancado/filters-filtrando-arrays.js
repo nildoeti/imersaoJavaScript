@@ -8,13 +8,18 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
 
-
-// exemplo 10
+// exemplo 11
 const numerosFiltrados = numeros.filter( (valor, indice, array) => {
-    return array; // retorno somentes dos valores do array
+    console.log(`Índice: ${indice} Valor: ${valor} Array: ${array}`);
 });
 
-console.log(numerosFiltrados);
+
+// exemplo 10
+// const numerosFiltrados = numeros.filter( (valor, indice, array) => {
+//     return array; // retorno somentes dos valores do array
+// });
+
+// console.log(numerosFiltrados);
 
 
 
