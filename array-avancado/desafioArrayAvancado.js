@@ -15,9 +15,17 @@ const pessoas = [
     {nome: 'Citrano', idade: 47}
 ];
 
-// Retorne as pessoas com mais de 50 anos
-const pessoasIdade = pessoas.filter( obj => obj.idade >= 50);
-console.log(pessoasIdade); // [ { nome: 'Fulano', idade: 62 }, { nome: 'Ciclano', idade: 55 } ]
+// Retorne as pessoas cujo nome termina com a letra e
+const pessoaTerminaComA = pessoas.filter(function(obj) {
+	return obj.nome.toLowerCase().endsWith('e');
+});
+
+console.log(pessoaTerminaComA);
+
+
+// 	Retorne as pessoas com mais de 50 anos
+// const pessoasIdade = pessoas.filter( obj => obj.idade >= 50);
+// console.log(pessoasIdade); // [ { nome: 'Fulano', idade: 62 }, { nome: 'Ciclano', idade: 55 } ]
 
 
 
