@@ -8,9 +8,18 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
 
-// exemplo 7
-const numerosFiltrados = numeros.filter(valor => valor > 10);
+const numerosFiltrados = numeros.filter( (valor, indice, array) => {
+    
+    console.log(valor); // retornando os valores do array em firnma de laço for 
+    return valor > 10;
+} );
+
 console.log(numerosFiltrados);
+
+
+// exemplo 7
+// const numerosFiltrados = numeros.filter(valor => valor > 10);
+// console.log(numerosFiltrados);
 
 
 // exemplo 6
