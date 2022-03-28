@@ -8,12 +8,25 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
 
+
+// exemplo 10
 const numerosFiltrados = numeros.filter( (valor, indice, array) => {
-    return indice;
-} );
+    return array; // retorno somentes dos valores do array
+});
 
 console.log(numerosFiltrados);
 
+
+
+// exemplo 9
+// const numerosFiltrados = numeros.filter( (valor, indice, array) => {
+//     return indice; // filter retornando somente os indices dos arrays
+// } );
+
+// console.log(numerosFiltrados);
+
+
+// exemplo 8
 // const numerosFiltrados = numeros.filter( (valor, indice, array) => {
     
 //     console.log(valor); // retornando os valores do array em firnma de laço for 
