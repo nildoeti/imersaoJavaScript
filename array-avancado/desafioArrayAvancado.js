@@ -15,12 +15,19 @@ const pessoas = [
     {nome: 'Citrano', idade: 47}
 ];
 
-// Retorne as pessoas cujo nome termina com a letra e
-const pessoaTerminaComA = pessoas.filter(function(obj) {
-	return obj.nome.toLowerCase().endsWith('e');
-});
 
-console.log(pessoaTerminaComA);
+// Retorne as pessoas cujo nome termina com a letra e mas com uso de arrow fuction
+const pessoaTerminalLetraE = pessoas.filter( obj => obj.nome.toLowerCase().endsWith('e'));
+console.log(pessoaTerminalLetraE); // [ { nome: 'Beldade', idade: 19 } ]
+
+
+
+// Retorne as pessoas cujo nome termina com a letra e
+// const pessoaTerminaComE = pessoas.filter(function(obj) {
+// 	return obj.nome.toLowerCase().endsWith('e');
+// });
+
+// console.log(pessoaTerminaComE);
 
 
 // 	Retorne as pessoas com mais de 50 anos
