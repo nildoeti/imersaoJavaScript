@@ -11,13 +11,20 @@
 
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
+// exemplo 3
+const numerosArray = numeros.map( (valor, indice, array) => {
+    return array;
+});
+
+console.log(numerosArray);
+
 // exemplo 2
-const numerosIndices = numeros.map((valor, indice, array) => {
+/*const numerosIndices = numeros.map((valor, indice, array) => {
     return indice; 
 });
 
 console.log(numerosIndices);
-// exemplo 1
+*/// exemplo 1
 // const numerosValor = numeros.map( (valor, indice, array) => {
 // 	return valor;
 // });
@@ -29,4 +36,4 @@ console.log(numerosIndices);
 // 	   5, 50, 80,  1,  2,  3,
 // 	   5,  8,  7, 11, 15, 22,
 // 	   27
-// 	]
+// 	]-m '''
