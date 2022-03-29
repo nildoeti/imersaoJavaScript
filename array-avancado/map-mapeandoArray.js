@@ -11,13 +11,21 @@
 
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
-
-// exemplo 6
-const novosValoresMap = numeros.map( (valor) => {
-	return `Valores alterados pelo método map: 0`; // valores alterados pelo método map
+// exemplo 7
+const valoresAlterados = numeros.map( (valor) => {
+	return `${valor} * ${valor} = ${valor * 2}`;
 });
 
-console.log(novosValoresMap);
+console.log(valoresAlterados);
+
+
+
+// exemplo 6
+//const novosValoresMap = numeros.map( (valor) => {
+	//return `Valores alterados pelo método map: 0`; // valores alterados pelo método map
+//});
+
+//console.log(novosValoresMap);
 
 
 // Exemplo 5
