@@ -2,7 +2,7 @@
  * Desafio:
  * 
  * Retorne uma string com o nome da pessoa
- * Retorne apenas a chave "nome" do objeto
+ * Remove apenas a chave "nome" do objeto
  * Adicione uma chave id em cada objeto
  * 
  * */
@@ -18,12 +18,14 @@ const pessoas = [
 ]
 
 // Retorne uma string com o nome da pessoa
-const nomePessoa = pessoas.map(valor => {
-	return valor.nome;
-});
+const nomePessoa = pessoas.map(valor => ({Nome: valor.nome}));
 
 console.log(nomePessoa); // [ 'Fulano', 'Beltrano', 'Ciclano', 'Beldade', 'Fulcano', 'Citrano' ]
 
 
  
+//  Remove apenas a chave "nome" do objeto
+ const chaveNome = pessoas.map(obj => ({Idade: obj.idade}));
  
+ console.log(chaveNome); // [ 62, 23, 55, 19, 32, 47 ]
+
