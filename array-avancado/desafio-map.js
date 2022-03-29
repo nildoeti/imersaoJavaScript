@@ -51,7 +51,7 @@ console.log(nomePessoa); // [ 'Fulano', 'Beltrano', 'Ciclano', 'Beldade', 'Fulca
 // Refazendo desafio, Adicione uma chave id em cada objeto, sem alterar o objeto origial
 const nomePessoaId = pessoas.map((obj, indice) => {
 	const newObj = { ...obj };
-	newObj.id = indice;
+	newObj.id = indice; // adicionado novo identificador ao array de objetos
 	return newObj;
 });
 console.log(nomePessoaId);
