@@ -11,12 +11,21 @@
 
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
-// Exemplo 5
-const valorIndiceArray = numeros.map( (valor, indice, array) => {
-	return `Índice: ${indice} Valor: ${valor} Array: ${array}}`;
+
+// exemplo 6
+const novosValoresMap = numeros.map( (valor) => {
+	return `Valores alterados pelo método map: 0`; // valores alterados pelo método map
 });
 
-console.log(valorIndiceArray);
+console.log(novosValoresMap);
+
+
+// Exemplo 5
+//const valorIndiceArray = numeros.map( (valor, indice, array) => {
+	//return `Índice: ${indice} Valor: ${valor} Array: ${array}}`;
+//});
+
+//console.log(valorIndiceArray);
 
 /*
  * 	Saida para valorIndiceArray
