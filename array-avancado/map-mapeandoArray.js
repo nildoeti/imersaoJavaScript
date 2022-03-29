@@ -11,13 +11,25 @@
 
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
-// exemplo 7
-const valoresAlterados = numeros.map( (valor) => {
+// exemplo 7 em qu map diferente de fulter, permite alterar os valores do array
+const valoresAlterados = numeros.map( valor => {
 	return `${valor} * ${valor} = ${valor * 2}`;
 });
 
 console.log(valoresAlterados);
 
+/*
+ * 	Exemplo da saida para valoresAlterados
+	[
+	  '5 * 5 = 10',    '50 * 50 = 100',
+	  '80 * 80 = 160', '1 * 1 = 2',
+	  '2 * 2 = 4',     '3 * 3 = 6',
+	  '5 * 5 = 10',    '8 * 8 = 16',
+	  '7 * 7 = 14',    '11 * 11 = 22',
+	  '15 * 15 = 30',  '22 * 22 = 44',
+	  '27 * 27 = 54'
+	]
+*/
 
 
 // exemplo 6
