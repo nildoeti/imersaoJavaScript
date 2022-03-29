@@ -28,15 +28,36 @@ console.log(nomePessoa); // [ 'Fulano', 'Beltrano', 'Ciclano', 'Beldade', 'Fulca
  console.log(chaveNome); // [ 62, 23, 55, 19, 32, 47 ]
 
 // Adicione uma chave id em cada objeto
-const nomePessoaId = pessoas.map( (obj, indice) => {
-	obj.id = indice; // usando o valor do índice como valor para o id
-	return obj;
-});
+//const nomePessoaId = pessoas.map( (obj, indice) => {
+	//obj.id = indice; // usando o valor do índice como valor para o id
+	//return obj;
+//});
 
-console.log(nomePessoaId);
+//console.log(nomePessoaId);
 
 /*
  * 	Saida para nomePessoaId:
+	[
+	  { nome: 'Fulano', idade: 62, id: 0 },
+	  { nome: 'Beltrano', idade: 23, id: 1 },
+	  { nome: 'Ciclano', idade: 55, id: 2 },
+	  { nome: 'Beldade', idade: 19, id: 3 },
+	  { nome: 'Fulcano', idade: 32, id: 4 },
+	  { nome: 'Citrano', idade: 47, id: 5 }
+	]
+*/
+
+
+// Refazendo desafio, Adicione uma chave id em cada objeto, sem alterar o objeto origial
+const nomePessoaId = pessoas.map((obj, indice) => {
+	const newObj = { ...obj };
+	newObj.id = indice;
+	return newObj;
+});
+console.log(nomePessoaId);
+
+/*
+ * 	Saida para nomePessoaId
 	[
 	  { nome: 'Fulano', idade: 62, id: 0 },
 	  { nome: 'Beltrano', idade: 23, id: 1 },
