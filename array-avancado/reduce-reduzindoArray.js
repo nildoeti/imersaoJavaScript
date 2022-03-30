@@ -4,13 +4,26 @@
 
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de números
 
+// exemplo 9
+const total = numeros.reduce((acumulador, valor) => {
+    if (valor %2 === 0) {
+        acumulador += valor;
+        console.log(`${acumulador}`);
+    }
+    return acumulador;
+}, 0);
+
+console.log(total);
+
+
+
 
 // retorne um array com o dobro dos valores (Map)
-const total = numeros.reduce((acumulador, valor) => {
-    acumulador.push(valor * 2);
-    return acumulador;
-}, []); 
-console.log(total);
+// const total = numeros.reduce((acumulador, valor) => {
+//     acumulador.push(valor * 2);
+//     return acumulador;
+// }, []); 
+// console.log(total);
 
 /*
     Saida para variável total
