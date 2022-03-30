@@ -5,13 +5,21 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de númros
 
 
-// exemplo 5 - some todos os números (reduce)
+// retorne um arrey com os pares (Filter)
 const total = numeros.reduce((acumulador, valor, indice, array) => {
-   acumulador += valor;
-    return acumulador; // retorna o valor total dos valores do array
-}, 0);
+    if (valor %2 === 0) acumulador.push(valor);
+    return acumulador;
+}, []);
+console.log(total); // [ 50, 80, 2, 8, 22 ]
 
-console.log(total);
+
+// exemplo 5 - some todos os números (reduce)
+// const total = numeros.reduce((acumulador, valor, indice, array) => {
+//    acumulador += valor;
+//     return acumulador; // retorna o valor total dos valores do array
+// }, 0);
+
+// console.log(total);
 
 // exemplo4
 //const total = numeros.reduce( (acumulador, valor, indice, array) => {
