@@ -18,6 +18,10 @@ const pessoa1 = new Object();
 pessoa1.nome = 'Fulano';
 pessoa1.sobrenome = 'de Tal'
 
-console.log(pessoa1.nome);
-console.log(pessoa1.sobrenome);
+// console.log(pessoa1.nome);
+// console.log(pessoa1.sobrenome);
 
+// deletando uma chave do objeto
+
+delete pessoa1.sobrenome;
+console.log(pessoa1);
