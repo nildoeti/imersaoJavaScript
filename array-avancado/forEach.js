@@ -3,15 +3,19 @@
 
 const numeros = [ 10, 20, 30, 40, 50, 60, 70, 80, 90 ];
 
+// exemplo de forEach com uso de arrow function trazendo os valores, indice e array literais
+numeros.forEach( (valor, indice, array) => console.log(
+    `Valor: ${valor} Índice: ${indice} Array: ${array}`
+    ));
 
 
 // exemplo de forEach com uso de arrow function trazendo os valores, indice e array
-numeros.forEach( (valor, indice, array) => console.log(valor, indice, array));
+// numeros.forEach( (valor, indice, array) => console.log(valor, indice, array));
 
 
 
 // exemplo de forEach com uso de arrow function trazendo os valores com indice
-numeros.forEach( (valores, indice) => console.log(valores, indice));
+// numeros.forEach( (valores, indice) => console.log(valores, indice));
 
 
 
