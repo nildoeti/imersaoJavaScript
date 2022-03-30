@@ -31,10 +31,15 @@ pessoa1.getDataNascimento = function() { // metodo getDataNascimento
 };
 
 
-// exibindo todas as chaves para pessoa1
-for (let chave in pessoa1) {
-    console.log(chave);
+// exibindo todas as propriedades para pessoa1 com laço for
+for (let valor in pessoa1) {
+    console.log(pessoa1[valor]);
 }
+
+// exibindo todas as chaves para pessoa1 com laço for
+// for (let chave in pessoa1) {
+//     console.log(chave);
+// }
 
 
 // console.log(pessoa1.nome);
