@@ -8,18 +8,29 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]; // array de números
 
 
-// Retornar a soma do dobro de todos os números pares e filtrar pares. dobrar os valores e reduzir e somar
-const total = numeros.filter( function (valor) {
-    return valor % 2 === 0;
-}).map(function (valor) {
-    return valor * 2;
-}).reduce( function (acumulador, valor) {
-    return acumulador + valor;
-});
+// reduzindo solução abaixo com arrow function
+const total = numeros
+.filter( valor => valor % 2 === 0)
+.map( valor => valor * 2)
+.reduce((acumulador, valor) => acumulador + valor);
 
-// filtrar números pares -> [ 50, 80, 2, 8, 22 ]
-// dobrar os valores dos números pares filtrados -> [ 100, 160, 4, 16, 44 ]
 console.log(total);
+
+
+
+// Retornar a soma do dobro de todos os números pares e filtrar pares. dobrar os valores e reduzir e somar
+// const total = numeros.filter( function (valor) {
+//     return valor % 2 === 0;
+// }).map(function (valor) {
+//     return valor * 2;
+// }).reduce( function (acumulador, valor) {
+//     return acumulador + valor;
+// });
+
+// // filtrar números pares -> [ 50, 80, 2, 8, 22 ]
+// // dobrar os valores dos números pares filtrados -> [ 100, 160, 4, 16, 44 ]
+// // reduzir e somar todos os número -> 324
+// console.log(total);
 
 
 
