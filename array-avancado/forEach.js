@@ -4,8 +4,14 @@
 const numeros = [ 10, 20, 30, 40, 50, 60, 70, 80, 90 ];
 
 
-// exemplo de forEach com uso de arrow function
-numeros.forEach(valor => console.log(valor));
+// exemplo de forEach com uso de arrow function trazendo os valores com indice
+numeros.forEach( (valores, indice) => console.log(valores, indice));
+
+
+
+// exemplo de forEach com uso de arrow function trazendo os valores somente
+// numeros.forEach(valor => console.log(valor));
+
 
 
 // saida personalizada para forEach
