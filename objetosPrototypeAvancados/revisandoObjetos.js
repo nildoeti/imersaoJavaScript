@@ -31,7 +31,7 @@ pessoa1.getDataNascimento = function() { // metodo getDataNascimento
 };
 
 
-// exibindo todas as propriedades para pessoa1 com laço for
+// exibindo todas os valores para pessoa1 com laço for
 for (let valor in pessoa1) {
     console.log(pessoa1[valor]);
 }
