@@ -67,11 +67,11 @@ console.log('Lista atual: ', nomes); // Lista atual:  [ 'Maria', 'João', 'Eduad
 // console.log(nomes, removidos); // [ 'Maria', 'João', 'Eduador', 'Gabriel', 'Ciclano' ] [ 'Julia' ]
 
 
-// simulação de push
-// const removidos = nomes.splice(-1, 0, 'Ciclano'); // adiciona 'Ciclano' ao final do array sem remover nenhum elemento
+// simulação de unshift
+// const removidos = nomes.splice(-1, 0, 'Ciclano'); // adiciona 'Ciclano' no início do array sem remover nenhum elemento
 // console.log(nomes, removidos); // [ 'Maria', 'João', 'Eduador', 'Gabriel', 'Ciclano', 'Julia' ] []
 
 
-// simulação de push
-const removidos = nomes.splice(nomes.lenght, 0, 'Fulano'); // adiciona 'Fulano' ao final do array sem remover nenhum elemento
+// simulação de unshift
+const removidos = nomes.splice(nomes.lenght, 0, 'Fulano'); // adiciona 'Fulano' no início do array sem remover nenhum elemento
 console.log(nomes, removidos); // [ 'Fulano', 'Maria', 'João', 'Eduador', 'Gabriel', 'Julia' ] []
