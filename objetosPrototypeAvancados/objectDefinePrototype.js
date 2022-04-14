@@ -48,21 +48,21 @@
 
 
 // exemplo 4
-function Produto(nome, preco, estoque) {
-	this.nome = nome; // publico
-	this.preco = preco;
+// function Produto(nome, preco, estoque) {
+// 	this.nome = nome; // publico
+// 	this.preco = preco;
 	
-	Object.defineProperty(this, 'estoque', {
-		// enumerable: true,
-		value: estoque
-	});
-}
+// 	Object.defineProperty(this, 'estoque', {
+// 		// enumerable: true,
+// 		value: estoque
+// 	});
+// }
 
 
-const p1 = new Produto('Camisa', 20, 3);
+// const p1 = new Produto('Camisa', 20, 3);
 
 
-console.log(p1.estoque); // 3,  
+// console.log(p1.estoque); // 3,  
 
 
 // confirmando que esta tudo ok
@@ -70,3 +70,20 @@ console.log(p1.estoque); // 3,
 // console.log(p1.nome); // Camisa
 // console.log(p1.preco); // 20
 // console.log(p1.estoque); // undefined, pois não foi tornado o acesso público com this
+
+
+
+// exemplo 5
+function Produto(nome, preco, estoque) {
+	// body...
+	this.nome = nome; // público
+	this.preco =preco; // público
+
+	Object.defineProperty(this, 'estoque', {
+		value: estoque // tornando estoque público
+	});
+}
+
+const p1 = new Produto('Camiseta', 30, 3);
+
+console.log(p1.estoque); // 3
