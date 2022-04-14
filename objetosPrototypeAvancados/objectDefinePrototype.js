@@ -56,3 +56,4 @@ function Produto(nome, preco, estoque) {
 const p1 = new Produto('Camiseta', 50, 3);
 
 console.log(p1); // Produto { nome: 'Camiseta', preco: 50 }
+console.log(p1.nome);
