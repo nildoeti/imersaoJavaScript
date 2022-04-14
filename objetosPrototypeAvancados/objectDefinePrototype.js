@@ -74,16 +74,34 @@
 
 
 // exemplo 5
+// function Produto(nome, preco, estoque) {
+// 	// body...
+// 	this.nome = nome; // público
+// 	this.preco =preco; // público
+
+// 	Object.defineProperty(this, 'estoque', {
+// 		value: estoque // tornando estoque público
+// 	});
+// }
+
+// const p1 = new Produto('Camiseta', 30, 3);
+
+// console.log(p1.estoque); // 3
+
+
+// exemplo 6
 function Produto(nome, preco, estoque) {
 	// body...
-	this.nome = nome; // público
-	this.preco =preco; // público
+	this.nome = nome;
+	this.preco = preco;
 
 	Object.defineProperty(this, 'estoque', {
-		value: estoque // tornando estoque público
+		enumerable: true,
+		value: estoque,
+		writable: true // pode alterar o valor?
 	});
 }
 
-const p1 = new Produto('Camiseta', 30, 3);
-
-console.log(p1.estoque); // 3
+const p1 = new Produto('Camisa', 20, 2);
+p1.estoque = 300; // 
+console.log(p1.estoque); // 300
