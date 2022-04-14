@@ -107,18 +107,37 @@
 // console.log(p1.estoque); // 300
 
 // exemplo 7
+// function Produto(nome, preco, estoque) {
+// 	// body...
+// 	this.nome = nome; // torna propriedade pública
+// 	this.preco = preco; // torna propriedade pública
+
+// 	Object.defineProperty(this, 'estoque', {
+// 		enumerable: true,
+// 		value: estoque,
+// 		writable: false // pode alterar valor
+// 	});
+// }
+
+// const p1 = new Produto('Camiseta', 80, 2);
+// p1.estoque = 40;
+// console.log(p1.estoque); // 2
+
+// exemplo 8
 function Produto(nome, preco, estoque) {
 	// body...
-	this.nome = nome; // torna propriedade pública
-	this.preco = preco; // torna propriedade pública
+	this.nome = nome;
+	this.preco = preco;
 
 	Object.defineProperty(this, 'estoque', {
-		enumerable: true,
-		value: estoque,
-		writable: false // pode alterar valor
+		enumerable: true, // mostra a chave
+		value: estoque, // valor da chave
+		writable: true, // permissão para alterar valor
+		configurable: false // alterar, configurar a chave
 	});
 }
 
-const p1 = new Produto('Camiseta', 80, 2);
-p1.estoque = 40;
-console.log(p1.estoque); // 2
+const p1 = new Produto('Camiseta', '70', 5);
+p1.estoque = 100;
+delete p1.estoque;
+console.log(p1.estoque);
