@@ -144,6 +144,26 @@
 
 
 // exemplo 9
+// function Produto(nome, preco, estoque) {
+// 	// body...
+// 	this.nome = nome;
+// 	this.preco = preco;
+
+// 	Object.defineProperty(this, 'estoque', {
+// 		enumerable: true,
+// 		value: function() {
+// 			return estoque;
+// 		},
+// 		writable: false,
+// 		configurable: true
+// 	});
+// }
+
+// const p1 = new Produto('Camiseta', 80, 5);
+// p1.estoque = 300;
+// console.log(p1.estoque());
+
+// exemplo 10
 function Produto(nome, preco, estoque) {
 	// body...
 	this.nome = nome;
@@ -152,13 +172,13 @@ function Produto(nome, preco, estoque) {
 	Object.defineProperty(this, 'estoque', {
 		enumerable: true,
 		value: function() {
+			// body...
 			return estoque;
 		},
-		writable: false,
+		writable: true,
 		configurable: true
 	});
 }
 
-const p1 = new Produto('Camiseta', 80, 5);
-p1.estoque = 300;
-console.log(p1.estoque());
+const p1 = new Produto('Camiseta', 40, 100);
+console.log(Object.keys(p1));
