@@ -124,20 +124,41 @@
 // console.log(p1.estoque); // 2
 
 // exemplo 8
+// function Produto(nome, preco, estoque) {
+// 	// body...
+// 	this.nome = nome;
+// 	this.preco = preco;
+
+// 	Object.defineProperty(this, 'estoque', {
+// 		enumerable: true, // mostra a chave
+// 		value: estoque, // valor da chave
+// 		writable: true, // permissão para alterar valor
+// 		configurable: false // alterar, configurar a chave
+// 	});
+// }
+
+// const p1 = new Produto('Camiseta', '70', 5);
+// p1.estoque = 100;
+// delete p1.estoque;
+// console.log(p1.estoque);
+
+
+// exemplo 9
 function Produto(nome, preco, estoque) {
 	// body...
 	this.nome = nome;
 	this.preco = preco;
 
 	Object.defineProperty(this, 'estoque', {
-		enumerable: true, // mostra a chave
-		value: estoque, // valor da chave
-		writable: true, // permissão para alterar valor
-		configurable: false // alterar, configurar a chave
+		enumerable: true,
+		value: function() {
+			return estoque;
+		},
+		writable: false,
+		configurable: true
 	});
 }
 
-const p1 = new Produto('Camiseta', '70', 5);
-p1.estoque = 100;
-delete p1.estoque;
-console.log(p1.estoque);
+const p1 = new Produto('Camiseta', 80, 5);
+p1.estoque = 300;
+console.log(p1.estoque());
