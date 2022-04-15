@@ -164,6 +164,27 @@
 // console.log(p1.estoque());
 
 // exemplo 10
+// function Produto(nome, preco, estoque) {
+// 	// body...
+// 	this.nome = nome;
+// 	this.preco = preco;
+
+// 	Object.defineProperty(this, 'estoque', {
+// 		enumerable: true,
+// 		value: function() {
+// 			// body...
+// 			return estoque;
+// 		},
+// 		writable: true,
+// 		configurable: true
+// 	});
+// }
+
+// const p1 = new Produto('Camiseta', 40, 100);
+// console.log(Object.keys(p1)); // [ 'nome', 'preco', 'estoque' ]
+
+
+// exemplo 11
 function Produto(nome, preco, estoque) {
 	// body...
 	this.nome = nome;
@@ -171,14 +192,17 @@ function Produto(nome, preco, estoque) {
 
 	Object.defineProperty(this, 'estoque', {
 		enumerable: true,
-		value: function() {
-			// body...
-			return estoque;
-		},
+		values: 'estoque',
 		writable: true,
 		configurable: true
 	});
 }
 
-const p1 = new Produto('Camiseta', 40, 100);
-console.log(Object.keys(p1));
+const p1 = new Produto('Camiseta', 90, 4);
+
+console.log(Object.keys(p1)); // [ 'nome', 'preco', 'estoque' ]
+
+// acessando chaves com laço for
+for (let chave in p1) {
+	console.log(chave);
+}
