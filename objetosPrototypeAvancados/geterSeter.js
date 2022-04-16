@@ -41,12 +41,27 @@
 //                     // nova propriedade b, que é um método para nosso objeto
 
 
-// Removendo um getter usando o operador delete
-const Colaborador = {
+// Exemplo simples para delete
+// const Colaborador = {
+//     nome: 'Fulano',
+//     sobreNome: 'de Tal'
+// }
+
+// console.log(Colaborador.nome); // Fulano
+
+// // deletando uma propriedade do objeto
+// delete Colaborador.nome;
+// console.log(Colaborador.nome); // undefined
+
+// novo exemplo simples para delete de uma propriedade de um objeto
+let Colaborador = {
     nome: 'Fulano',
-    sobreNome: 'de Tal'
+    sobreNome: 'de Tal',
+    cargo: 'Desenvolvedor'
 }
 
-console.log(Colaborador.nome); // Fulano
-delete Colaborador.nome;
-console.log(Colaborador.nome);
+// exibindo todas as propriedades e valores do obj
+console.log(Colaborador); // { nome: 'Fulano', sobreNome: 'de Tal', cargo: 'Desenvolvedor' }
+console.log(delete Colaborador.nome); // true
+console.log(delete Colaborador.sobreNome); // true
+console.log(delete Colaborador.salario); // true
