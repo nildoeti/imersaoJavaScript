@@ -29,13 +29,24 @@
 
 // Para adicionar um getter a um objeto existente a qualquer momento,
 // use Object.defineProperty().
-let o = {a:0} // um objeto com propriedade a, e valor 0
-Object.defineProperty(o, 'b', { // Object.defineProperty, é usado para adicionar
-                                // get em um objeto
-    get: function() { // get chama uma função anônima
-        return this.a + 1; // e que retorna o valor da propriedade a, soma a 1
-    }
-});
+// let o = {a:0} // um objeto com propriedade a, e valor 0
+// Object.defineProperty(o, 'b', { // Object.defineProperty, é usado para adicionar
+//                                 // get em um objeto
+//     get: function() { // get chama uma função anônima
+//         return this.a + 1; // e que retorna o valor da propriedade a, soma a 1
+//     }
+// });
 
-console.log(o.b); // nosso objeto o, é chamado a interagir com a propriedade a
-                    // nova propriedade b, que é um método para nosso objeto
+// console.log(o.b); // nosso objeto o, é chamado a interagir com a propriedade a
+//                     // nova propriedade b, que é um método para nosso objeto
+
+
+// Removendo um getter usando o operador delete
+const Colaborador = {
+    nome: 'Fulano',
+    sobreNome: 'de Tal'
+}
+
+console.log(Colaborador.nome); // Fulano
+delete Colaborador.nome;
+console.log(Colaborador.nome);
