@@ -54,14 +54,27 @@
 // console.log(Colaborador.nome); // undefined
 
 // novo exemplo simples para delete de uma propriedade de um objeto
-let Colaborador = {
-    nome: 'Fulano',
-    sobreNome: 'de Tal',
-    cargo: 'Desenvolvedor'
-}
+// let Colaborador = {
+//     nome: 'Fulano',
+//     sobreNome: 'de Tal',
+//     cargo: 'Desenvolvedor'
+// }
 
-// exibindo todas as propriedades e valores do obj
-console.log(Colaborador); // { nome: 'Fulano', sobreNome: 'de Tal', cargo: 'Desenvolvedor' }
-console.log(delete Colaborador.nome); // true
-console.log(delete Colaborador.sobreNome); // true
-console.log(delete Colaborador.salario); // true
+// // retornado true com delete para propriedade de objetos
+// console.log(Colaborador); // { nome: 'Fulano', sobreNome: 'de Tal', cargo: 'Desenvolvedor' }
+// console.log(delete Colaborador.nome); // true
+// console.log(delete Colaborador.sobreNome); // true
+// console.log(delete Colaborador.salario); // true
+
+
+// Propriedades não configuráveis
+// Quando uma propriedade é marcada como não configurável, delete não terá
+// nenhum efeito e retornará false. No modo estrito, isso gerará um TypeError.
+
+let Colaborador = {} // objeto vazio
+
+Object.defineProperty(Colaborador, 'nome', {
+    configurable: false
+});
+console.log(Colaborador); // {}
+console.log(delete Colaborador.nome); // false
