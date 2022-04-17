@@ -155,7 +155,13 @@ for (let [chave, valor] of Object.entries(produto)) {
     */
 }
 
-// novo exemplo de interação com laço for e o método Object.entries
+// novo exemplo de interação com laço for e o método Object.entries, porém acessando a posição do array
 for (let item of Object.entries(produto)) {
     console.log(item[0], item[1]);
+    /*
+        Saida para o exemplo acima:
+        nome Camisa
+        preco 4.8
+        origem brasil
+    */ 
 }
