@@ -49,25 +49,31 @@
 
 
 // uso da expressão object.assign
-const produto = {nome: 'Camiseta', preco: 3.6};
+// const produto = {nome: 'Camiseta', preco: 3.6};
 
-// nova cópia com uso da expresão spread operator
-// const copiaProduto = {
-//     ...produto,
-//     // adicionado novas propriedades
-//     cor: 'amarelo',
-//     origem: 'brasil' // e quantas propriedades e valors precisar
-// }
+// // nova cópia com uso da expresão spread operator
+// // const copiaProduto = {
+// //     ...produto,
+// //     // adicionado novas propriedades
+// //     cor: 'amarelo',
+// //     origem: 'brasil' // e quantas propriedades e valors precisar
+// // }
 
-// nova cópia do objeto produto com uso da expresão object.assign
-const copiaProduto = Object.assign({}, produto, {cor: 'amarelo', origem: 'brasil'});
+// // nova cópia do objeto produto com uso da expresão object.assign
+// const copiaProduto = Object.assign({}, produto, {cor: 'amarelo', origem: 'brasil'});
 
-// nova cópia do objeto produto com uso somente das propriedades sem spread operator e Object.assign
-const copiaProduto2 = { nome: produto.nome, preco: produto.preco}; // chamando nosso objeto origem
-                                                                    // seguido de sua propriedade
-console.log(copiaProduto2); // { nome: 'Camiseta', preco: 3.6 }
+// // nova cópia do objeto produto com uso somente das propriedades sem spread operator e Object.assign
+// const copiaProduto2 = { nome: produto.nome, preco: produto.preco}; // chamando nosso objeto origem
+//                                                                     // seguido de sua propriedade
+// console.log(copiaProduto2); // { nome: 'Camiseta', preco: 3.6 }
 
-// listando os objetos
-console.log(produto); // { nome: 'Calça', preco: 3.6 }
-console.log(copiaProduto); // { nome: 'Camiseta', preco: 3.6, cor: 'amarelo', origem: 'brasil' }
+// // listando os objetos
+// console.log(produto); // { nome: 'Calça', preco: 3.6 }
+// console.log(copiaProduto); // { nome: 'Camiseta', preco: 3.6, cor: 'amarelo', origem: 'brasil' }
+
+
+// REVISÃO
+// revisão de acesso as chaves de um objeto
+const produtos = { nome: 'Camiseta', preco: 2.9}
+console.log(Object.keys(produtos)); // [ 'nome', 'preco' ]
 
