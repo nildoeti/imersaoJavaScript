@@ -102,3 +102,25 @@ console.log(Object.getOwnPropertyDescriptor(produto, 'nome'));
 */
 
 console.log(Object.getOwnPropertyDescriptor(produto, 'preco')); // { value: 4.8, writable: true, enumerable: true, configurable: true }
+
+// alterar permissões das propriedades do objeto produto
+Object.defineProperty(produto, 'nome', {
+    writable: false,
+    configurable: false
+});
+
+console.log(Object.getOwnPropertyDescriptor(produto, 'nome'));
+/*
+    saida do exemplo da alteração para a propriedade nome do objeto produto
+    {
+    value: 'Camisa',
+    writable: false,
+    enumerable: true,
+    configurable: false
+    }
+*/
+
+// tentativa de alterar/deletar a propriedade nome do objeto produto
+produto.nome = 'Outra coisa';
+delete produto.nome;
+console.log(produto.nome); // camisa
