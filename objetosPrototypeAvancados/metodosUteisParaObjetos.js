@@ -127,8 +127,18 @@
 
 
 // Object.values
-const produto = {nome: 'Camisa', preco: 4.8};
+const produto = {nome: 'Camisa', preco: 4.8, origem: 'brasil'};
 // console.log(Object.values(produto)); // [ 'Camisa', 4.8 ]
 
 // Object.entries
 console.log(Object.entries(produto)); // [ [ 'nome', 'Camisa' ], [ 'preco', 4.8 ] ]
+
+// uso do laço for para interagir com Object.entries 
+for (let interagir of Object.entries(produto)) {
+    console.log(interagir);
+    /*
+        [ 'nome', 'Camisa' ]
+        [ 'preco', 4.8 ]
+        [ 'origem', 'brasil' ]
+    */
+}
