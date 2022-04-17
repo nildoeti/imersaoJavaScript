@@ -137,8 +137,20 @@ console.log(Object.entries(produto)); // [ [ 'nome', 'Camisa' ], [ 'preco', 4.8 
 for (let interagir of Object.entries(produto)) {
     console.log(interagir);
     /*
+        Saida para interação do objeto com laço for e uso do método Object.entries
         [ 'nome', 'Camisa' ]
         [ 'preco', 4.8 ]
         [ 'origem', 'brasil' ]
+    */
+}
+
+// novo exemplo de uso do laço for para exibir propriedades/valores com o método Object.entries
+for (let [chave, valor] of Object.entries(produto)) {
+    console.log(chave, valor);
+    /*
+        Saida da interação acima:
+        nome Camisa
+        preco 4.8
+        origem brasil
     */
 }
