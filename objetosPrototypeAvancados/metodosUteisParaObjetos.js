@@ -154,3 +154,8 @@ for (let [chave, valor] of Object.entries(produto)) {
         origem brasil
     */
 }
+
+// novo exemplo de interação com laço for e o método Object.entries
+for (let item of Object.entries(produto)) {
+    console.log(item[0], item[1]);
+}
