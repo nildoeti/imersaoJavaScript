@@ -26,23 +26,42 @@
 
 
 // exemplo de como espelhar as propriedades de um objeto com sread operatorp
-const produto = {nome: 'Camisa', preco: 3.6};
+// const produto = {nome: 'Camisa', preco: 3.6};
 
-// espelhando as propriedade e valores do objeto produto
-const copiaProduto = {
-    ...produto,
-    cor: 'Preto',
-    origem: 'Brasil'
-}; // spread operatorp
+// // espelhando as propriedade e valores do objeto produto
+// const copiaProduto = {
+//     ...produto,
+//     cor: 'Preto',
+//     origem: 'Brasil'
+// }; // spread operatorp
 
-// verificando as propriedades de valores dois dois objetos
-console.log(produto); // { nome: 'Camisa', preco: 3.6 }
-console.log(copiaProduto); // { nome: 'Camisa', preco: 3.6 }
+// // verificando as propriedades de valores dois dois objetos
+// console.log(produto); // { nome: 'Camisa', preco: 3.6 }
+// console.log(copiaProduto); // { nome: 'Camisa', preco: 3.6 }
 
-// alterar a propriedade nome do objeto produto, não reflete no objeto copiaProduto
-// pois a cópia foi feita com a sintáxe de espalhamento spread operator, caso
-// contrário, a cópia será alterada.
-produto.nome = 'Calça';
-console.log('\n');
+// // alterar a propriedade nome do objeto produto, não reflete no objeto copiaProduto
+// // pois a cópia foi feita com a sintáxe de espalhamento spread operator, caso
+// // contrário, a cópia será alterada.
+// produto.nome = 'Calça';
+// console.log('\n');
+// console.log(produto); // { nome: 'Calça', preco: 3.6 }
+// console.log(copiaProduto);
+
+// uso da expressão object.assign
+const produto = {nome: 'Camiseta', preco: 3.6};
+
+// nova cópia
+// const copiaProduto = {
+//     ...produto,
+//     // adicionado novas propriedades
+//     cor: 'amarelo',
+//     origem: 'brasil' // e quantas propriedades e valors precisar
+// }
+
+// cópia do objeto produto com object.assign
+const copiaProduto = Object.assign({}, produto);
+
+// listando os objetos
 console.log(produto); // { nome: 'Calça', preco: 3.6 }
-console.log(copiaProduto);
+console.log(copiaProduto); // { nome: 'Camiseta', preco: 3.6, cor: 'amarelo', origem: 'brasil' }
+
