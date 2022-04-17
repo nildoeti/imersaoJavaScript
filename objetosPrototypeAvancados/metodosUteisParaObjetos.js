@@ -25,7 +25,7 @@
 // console.log(p1.nome);
 
 
-// exemplo de como espelhar as propriedades de um objeto com sread operatorp
+// exemplo de como espelhar as propriedades de um objeto com spread operator
 // const produto = {nome: 'Camisa', preco: 3.6};
 
 // // espelhando as propriedade e valores do objeto produto
@@ -47,10 +47,11 @@
 // console.log(produto); // { nome: 'Calça', preco: 3.6 }
 // console.log(copiaProduto);
 
+
 // uso da expressão object.assign
 const produto = {nome: 'Camiseta', preco: 3.6};
 
-// nova cópia
+// nova cópia com uso da expresão spread operator
 // const copiaProduto = {
 //     ...produto,
 //     // adicionado novas propriedades
@@ -58,8 +59,13 @@ const produto = {nome: 'Camiseta', preco: 3.6};
 //     origem: 'brasil' // e quantas propriedades e valors precisar
 // }
 
-// cópia do objeto produto com object.assign
-const copiaProduto = Object.assign({}, produto);
+// nova cópia do objeto produto com uso da expresão object.assign
+const copiaProduto = Object.assign({}, produto, {cor: 'amarelo', origem: 'brasil'});
+
+// nova cópia do objeto produto com uso somente das propriedades sem spread operator e Object.assign
+const copiaProduto2 = { nome: produto.nome, preco: produto.preco}; // chamando nosso objeto origem
+                                                                    // seguido de sua propriedade
+console.log(copiaProduto2); // { nome: 'Camiseta', preco: 3.6 }
 
 // listando os objetos
 console.log(produto); // { nome: 'Calça', preco: 3.6 }
