@@ -128,5 +128,7 @@
 
 // Object.values
 const produto = {nome: 'Camisa', preco: 4.8};
-console.log(Object.values(produto)); // [ 'Camisa', 4.8 ]
+// console.log(Object.values(produto)); // [ 'Camisa', 4.8 ]
 
+// Object.entries
+console.log(Object.entries(produto)); // [ [ 'nome', 'Camisa' ], [ 'preco', 4.8 ] ]
