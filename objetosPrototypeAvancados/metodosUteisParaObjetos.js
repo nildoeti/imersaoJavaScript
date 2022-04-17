@@ -74,14 +74,31 @@
 
 // REVISÃO
 // revisão de acesso as chaves de um objeto
-const produtos = { nome: 'Camiseta', preco: 2.9}
-console.log(Object.keys(produtos)); // [ 'nome', 'preco' ]
+// const produtos = { nome: 'Camiseta', preco: 2.9}
+// console.log(Object.keys(produtos)); // [ 'nome', 'preco' ]
 
-// protegendo nosso objeto de ser alterado
-const copiaProduto3 = Object.assign({}, produtos);
-console.log(copiaProduto3);
+// // protegendo nosso objeto de ser alterado
+// const copiaProduto3 = Object.assign({}, produtos);
+// console.log(copiaProduto3);
 
-// protejendo nosso objeto de ser alterado
-Object.freeze(copiaProduto3);
-copiaProduto3.nome = 'Calça';
-console.log(copiaProduto3); // { nome: 'Camiseta', preco: 2.9 }
+// // protejendo nosso objeto de ser alterado
+// Object.freeze(copiaProduto3);
+// copiaProduto3.nome = 'Calça';
+// console.log(copiaProduto3); // { nome: 'Camiseta', preco: 2.9 }
+
+// trabalhanco com descrição de uma propriedade com o método getOwnPropertyDescriptor
+// Sintaxe: Object.getOwnPropertyDescriptor(obj, prop)
+const produto = {nome: 'Camisa', preco: 4.8};
+// console.log(produto);
+
+console.log(Object.getOwnPropertyDescriptor(produto, 'nome'));
+/*
+    {
+    value: 'Camisa',
+    writable: true,
+    enumerable: true,
+    configurable: true
+    }
+*/
+
+console.log(Object.getOwnPropertyDescriptor(produto, 'preco')); // { value: 4.8, writable: true, enumerable: true, configurable: true }
