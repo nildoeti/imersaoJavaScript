@@ -29,13 +29,19 @@
 const produto = {nome: 'Camisa', preco: 3.6};
 
 // espelhando as propriedade e valores do objeto produto
-const copiaProduto = {...produto}; // spread operatorp
+const copiaProduto = {
+    ...produto,
+    cor: 'Preto',
+    origem: 'Brasil'
+}; // spread operatorp
 
 // verificando as propriedades de valores dois dois objetos
 console.log(produto); // { nome: 'Camisa', preco: 3.6 }
 console.log(copiaProduto); // { nome: 'Camisa', preco: 3.6 }
 
-// alterar a propriedade nome do objeto produto, reflete no objeto copiaProduto
+// alterar a propriedade nome do objeto produto, não reflete no objeto copiaProduto
+// pois a cópia foi feita com a sintáxe de espalhamento spread operator, caso
+// contrário, a cópia será alterada.
 produto.nome = 'Calça';
 console.log('\n');
 console.log(produto); // { nome: 'Calça', preco: 3.6 }
