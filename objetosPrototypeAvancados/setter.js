@@ -41,17 +41,36 @@
 
 
 // exemplo 3
+// function criaProduto(nome) {
+//     return {
+//         get nome() {
+//             return nome
+//         },
+//         set nome(valor) {
+//             return valor;
+//         }
+//     };
+// }
+
+// const p2 = criaProduto('Camiseta');
+// console.log(p2); // { nome: [Getter/Setter] }
+// console.log(p2.nome); // Camiseta
+
+// interceptar valores para a propriedade de um objeto
 function criaProduto(nome) {
     return {
         get nome() {
-            return nome
+            return nome;
         },
         set nome(valor) {
-            return valor;
+            valor = valor.replace('coisa', ''); // interceptação
+            nome = valor;
         }
     };
 }
 
 const p2 = criaProduto('Camiseta');
-console.log(p2); // { nome: [Getter/Setter] }
-console.log(p2.nome); // Camiseta
+console.log(p2.nome);
+
+p2.nome = 'Qualquer coisa'
+console.log(p2.nome);
