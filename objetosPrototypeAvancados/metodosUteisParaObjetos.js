@@ -77,3 +77,11 @@
 const produtos = { nome: 'Camiseta', preco: 2.9}
 console.log(Object.keys(produtos)); // [ 'nome', 'preco' ]
 
+// protegendo nosso objeto de ser alterado
+const copiaProduto3 = Object.assign({}, produtos);
+console.log(copiaProduto3);
+
+// protejendo nosso objeto de ser alterado
+Object.freeze(copiaProduto3);
+copiaProduto3.nome = 'Calça';
+console.log(copiaProduto3); // { nome: 'Camiseta', preco: 2.9 }
