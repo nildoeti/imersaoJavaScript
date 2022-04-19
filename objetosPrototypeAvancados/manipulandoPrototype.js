@@ -63,3 +63,53 @@ p1.aumento(100);
 console.log(p1); // Produto { nome: 'Camiseta', preco: 80 }
 
 
+// reaproveitando os métodos desconto/aumento do objeto produto
+// novo produt p2
+const p2 = {
+    nome: 'caneca',
+    preco: 15
+};
+
+// aproveitando os métodos aunmento;desconto para p2 com uso de setPrototypeOf
+Object.setPrototypeOf(p2, Produto.prototype); //p2, rece os métodos da função construtora Produto
+
+p2.aumento(10); // adiconado aumento de 10% ao produto
+console.log(p2); // Produto { nome: 'caneca', preco: 16.5 }
+
+
+/*
+    Saida do cobnsole pelo navegador, para confirmação que o proto foi alterado
+
+    Object { nome: "Camiseta", preco: 100 }
+    ​
+    nome: "Camiseta"
+    ​
+    preco: 100
+    ​
+    <prototype>: Object { desconto: desconto(percentual), aumento: aumento(percentual)
+    , … }
+    ​​
+    aumento: function aumento(percentual)​​
+    constructor: function Produto(nome, preco)​​
+    desconto: function desconto(percentual)​​
+    <prototype>: Object { … }
+
+    Object { nome: "caneca", preco: 16.5 }
+    ​
+    nome: "caneca"
+    ​
+    preco: 16.5
+    ​
+    <prototype>: Object { desconto: desconto(percentual), aumento: aumento(percentual)
+    , … }
+    ​​
+    aumento: function aumento(percentual)​​
+    constructor: function Produto(nome, preco)​​
+    desconto: function desconto(percentual)​​
+    <prototype>: Object { … }
+*/
+
+const p3 = Object.create(Produto.prototype);
+p3.preco = 113;
+p3.aumento(10);
+console.log(p3);
