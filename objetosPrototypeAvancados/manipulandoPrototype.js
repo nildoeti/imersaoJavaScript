@@ -109,7 +109,28 @@ console.log(p2); // Produto { nome: 'caneca', preco: 16.5 }
     <prototype>: Object { … }
 */
 
+// usando os métodos da função construtora Produto para p3
 const p3 = Object.create(Produto.prototype);
 p3.preco = 113;
 p3.aumento(10);
-console.log(p3);
+console.log(p3); // Produto { preco: 124.3 }
+
+
+const p4 = Object.create(Produto.prototype, { // adicionado o prototype para objeto p4
+    preco: {
+        writable: true,
+        configurable: true,
+        enumerable: true,
+        value: 99
+    },
+
+    tamanho: {
+        writable: true,
+        configurable: true,
+        enumerable: true,
+        value: 10
+    }
+});
+
+p4.aumento(10);
+console.log(p4); // Produto { preco: 46.2, tamanho2: 10 }
