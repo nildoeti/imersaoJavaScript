@@ -1,22 +1,36 @@
-// Manipulando prototype
-//
-
+// // Manipulando prototype
 const objA = {
-	chaveA: 'A'
+    chaveA: 'A'
 }
 
 const objB = {
-	chaveB: 'B'
+    chaveB: 'B'
 }
 
+// criando novo objeto
 const objC = new Object();
 objC.chaveC = 'C';
 
 
 
-Object.setPrototypeOf(objB, objA); //  adicionado objA, como prototype de objB
-Object.setPrototypeOf(objC, objB);
+Object.setPrototypeOf(objB, objA); // objB herda o proto de objA
+Object.setPrototypeOf(objC, objB) // objC herda o proto de objB
 
-
-console.log(objB.chaveA);
-console.log(objC.chaveC);
+/*
+    Saida para os exemplos acima, pelo console do navegador
+    
+    objC
+    Object { chaveC: "C" }
+    ​
+    chaveC: "C"
+    ​
+    <prototype>: Object { chaveB: "B" }
+    ​​
+    chaveB: "B"
+    ​​
+    <prototype>: Object { chaveA: "A" }
+    ​​​
+    chaveA: "A"
+    ​​​
+    <prototype>: Object { … }
+*/
