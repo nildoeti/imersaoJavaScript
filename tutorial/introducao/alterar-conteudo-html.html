@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alterando conteúdo com JavaScript</title>
+</head>
+<body>
+    <h1>O que o JavaScript pode fazer?</h1>
+    <p id="demo">JavaScript pode alterar o conteúdo de uma página HTML.</p>
 
-    <head>
-        <meta charset="utf-8" />
-        <title>sem título</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="Geany 1.36" />
-    </head>
+    <button id="demo" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript"'>
+        Clique me.
+    </button>
 
-    <body>
-        <h2>O que o JavaScript pode fazer?</h2>
-        <p>O JavaScript pode alterar o conteúdo HTML.</p>
-        
-        
-    </body>
-
+    <script src="alterar-conteudo-html.js"></script>
+</body>
 </html>
