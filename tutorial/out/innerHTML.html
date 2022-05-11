@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Usando innerhTML</title>
+</head>
+<body>
+	<p>
+		Para acessar um elemento HTML, JavaScript pode usar o 
+		<code>
+			document.getElementById(id)método.
+		</code>
+	</p>
+
+	<p>
+		O idatributo define o elemento <em>HTML</em>. A propriedade <em>innerHTML</em> 
+		define o conteúdo <strong>HTML</strong>.
+	</p>
+
+
+	<p id="demo"></p>
+
+	<script>
+		document.getElementById('demo').innerHTML = 5 + 4;
+	</script>
+</body>
+</html>
