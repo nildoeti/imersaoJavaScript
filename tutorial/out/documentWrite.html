@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Using <code>documento.write()</code></title>
+</head>
+<body>
+	<h1>Using <code>documento.write()</code></h1>
+	<p>
+		Nunca chame document.write após o carregamento do documento. Ele irá sobrescrever todo o documento.
+	</p>
+
+	<script>
+		document.write(5 + 8);
+	</script>
+</body>
+</html>
