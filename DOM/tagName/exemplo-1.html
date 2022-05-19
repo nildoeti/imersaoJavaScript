@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>The Document Object</title>
+    </head>
+    <body>
+        <h1>The docment object</h1>
+        <h2>The <code>getElementByTagName()</code> Method</h2>
+
+        <p>An unodered list</p>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <p>The <code>innerHTML</code> of the second <code>li</code> element is:</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            const collection = document.getElementsByTagName('li');
+            document.getElementById('demo1').innerHTML = collection[0].innerHTML;
+            document.getElementById('demo2').innerHTML = collection[1].innerHTML;
+            document.getElementById('demo3').innerHTML = collection[1].innerHTML;
+        </script>
+    </body>
+</html>
