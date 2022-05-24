@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript HTML DOM</title>
+    </head>
+    <body>
+        <h1>JavaScript HTML DOM</h1>
+        <p>Finding by HTML element by tag name</p>
+        <p>This example demotrates the <code>getElementByTagName</code> method</p>
+        <hr>
+        <p id="demo"></p>
+
+        <script>
+            const element = document.getElementsByTagName('p');
+            document.getElementById('demo').innerHTML =
+            `The text in first paragraph (index, 0) is: ` + element[0].innerHTML;
+        </script>
+    </body>
+</html>
