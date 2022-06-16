@@ -22,49 +22,53 @@
 //         nome: paramNome,
 //         preco: paramPreco,
 //         calculaDesconto: function() {
-//             return this.preco * 0.3;
+
+//             return this.preco * 0.1;
 //         }
 //     };
 // }
 
-
-// let produto1 = criaProduto('Camisa', 120);
-// let produto2 = criaProduto('Calca', 290);
-
-// let p1 = produto1.calculaDesconto();
-// let p2 = produto2.calculaDesconto();
+// // criamos dois produtos com uso da mesma função
+// var p1 = criaProduto('Camisa', 99);
+// var p2 = criaProduto('Calça', 139);
 
 // console.log(p1, p2);
 
-// function Produto(paramNome, paramPreco) {
-//     this.nome = paramNome;
-//     this.preco = paramPreco;
-//     this.calculaDesconto = function(){
+
+// sintáxe defina no javascript para estruturas de objetos
+// function Produto(paramNome, paramPreco) { // função construtora
+//     this.nome = paramNome,
+//     this.preco = paramPreco,
+//     this.calculaDesconto = function() {
+//         // calcula 10% de desconto
 //         return this.preco * 0.1;
 //     };
 // }
 
-// var p1 = new Produto('Blusa', 70);
-// var p2 = new Produto('Calça', 89);
+// var p1 = new Produto('Camisa', 99);
+// var p2 = new Produto('Calça', 290);
 
-// p1.calculaDesconto();
-// p2.calculaDesconto();
+// console.log(p1.calculaDesconto());
+// console.log(p2.calculaDesconto());
 
-// console.log(p1, p2);
 
+// outra maneira de criar um construtor (e a classe) com EcmaScript 2015
 class Produto {
-    constructor(paramNome, paramPreco) {
+    constructor (paramNome, paramPreco) {
         this.nome = paramNome;
         this.preco = paramPreco;
-    } calculaDesconto() {
+    } calculaDesconto () {
+        // calcula 10% de desconto
         return this.preco * 0.1;
     }
 }
 
-var p1 = new Produto('Camisa', 78);
-var p2 = new Produto('Calça', 99);
+// temos uma class, e não mais uma function
+// definimos os atributos dentro de constructor
+// o método calculaDesconto fica a parte, sem o this
 
-p1.calculaDesconto();
-p2.calculaDesconto();
+var p1 = new Produto('Camisa', 99,89);
+console.log(p1.calculaDesconto());
 
-console.log(p1, p2);
+var p2 = new Produto('Meia', 12,70);
+console.log(p2.calculaDesconto());
