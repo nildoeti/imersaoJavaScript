@@ -1,4 +1,4 @@
-// exemplo 1 de objeto
+// exemplo 1 de objeto literal
 const pessoa = {
     nome: 'Fulano de',
     sobreNome: 'Tal'
@@ -11,7 +11,9 @@ console.log(pessoa.sobreNome);
 console.log(pessoa['nome']);
 console.log(pessoa['sobreNome']);
 // modo dinâmico de acessar a propriedade nome
-const chave = 'nome';
-console.log(pessoa[chave]);
+const chaveNome = 'nome';
+const chaveSobreNome = 'sobrenome';
+console.log(pessoa[chaveNome]);
+console.log(pessoa[chaveSobreNome]);
 
 
