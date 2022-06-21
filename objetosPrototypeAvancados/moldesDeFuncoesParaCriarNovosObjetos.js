@@ -28,3 +28,15 @@ console.log(pd1.produto);
 console.log(typeof(pd1));
 console.log(pd1.nome);
 console.log(pd1.codigo);
+
+
+// constructor function
+function Pessoa ( nome, sobrenome ) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    // Object.freeze(this); // protegendo as propriedades de serem alteradas
+}
+
+const pessoa1 = new Pessoa('Ciclano de', 'Tal');
+delete pessoa1.nome;
+console.log(pessoa1);
