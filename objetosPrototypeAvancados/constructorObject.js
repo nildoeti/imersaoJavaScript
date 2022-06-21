@@ -35,3 +35,8 @@ console.log(`Ano de nascimento é ${pessoa1.anoNascimento()}`);
 for (let chave in pessoa1) {
     console.log(chave);
 }
+// acessando os valores das chaves de um objeto
+for (let chave in pessoa2) {
+    console.log(pessoa2[chave]);
+}
+
