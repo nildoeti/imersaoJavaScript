@@ -31,3 +31,7 @@ pessoa1.anoNascimento = function() {
 
 console.log(`Ano de nascimento é ${pessoa1.anoNascimento()}`);
 
+// acessando as chaves de um objeto
+for (let chave in pessoa1) {
+    console.log(chave);
+}
